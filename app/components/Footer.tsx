@@ -1,4 +1,4 @@
-import { Mail, MapPin, Globe } from "lucide-react";
+import { Mail, MapPin, Globe, Phone } from "lucide-react";
 import { navLinks } from "../lib/constants";
 import Image from "next/image";
 
@@ -62,6 +62,18 @@ export function Footer() {
                 </span>
               </li>
               <li className="flex items-center gap-3">
+                <Phone size={14} className="text-gold shrink-0" />
+                <span className="font-mono text-xs text-white/60">
+                  9851288989
+                </span>
+              </li>
+              <li className="flex items-center gap-3">
+                <Phone size={14} className="text-gold shrink-0" />
+                <span className="font-mono text-xs text-white/60">
+                  9862255871
+                </span>
+              </li>
+              <li className="flex items-center gap-3">
                 <MapPin size={14} className="text-gold shrink-0" />
                 <span className="font-mono text-xs text-white/60">
                   Butwal, Lumbini Province, Nepal
@@ -82,7 +94,7 @@ export function Footer() {
             2026 Lumbini Province Police. All rights reserved.
           </p>
           <p className="font-mono text-xs uppercase text-white/20">
-            HACKATHON 2026 · Innovation for Secure Digital Nepal
+            Innovation for Secure Digital Nepal
           </p>
         </div>
       </div>

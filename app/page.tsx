@@ -12,7 +12,9 @@ import { Mentors } from "./components/Mentors";
 import { FAQ } from "./components/FAQ";
 import { OrganizingTeam } from "./components/OrganizingTeam";
 import { Register } from "./components/Register";
+import { ContactPeople } from "./components/ContactPeople";
 import { Footer } from "./components/Footer";
+import { ScrollToTop } from "./components/ScrollToTop";
 
 export default function Home() {
   return (
@@ -31,7 +33,9 @@ export default function Home() {
       <OrganizingTeam />
       <FAQ />
       <Register />
+      <ContactPeople />
       <Footer />
+      <ScrollToTop />
     </div>
   );
 }

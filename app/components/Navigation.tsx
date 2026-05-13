@@ -8,11 +8,19 @@ import Image from "next/image";
 export function Navigation() {
   const [mobileOpen, setMobileOpen] = useState(false);
 
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
   return (
     <>
       <nav className="sticky top-0 z-50 bg-white/96 backdrop-blur-sm border-b border-border shadow-sm">
         <div className="mx-auto max-w-7xl px-6 md:px-10 h-16 flex items-center justify-between">
-          <div className="flex items-center gap-3">
+          <button
+            onClick={scrollToTop}
+            className="flex items-center gap-3 cursor-pointer hover:opacity-80 transition-opacity"
+            aria-label="Scroll to top"
+          >
             <Image
               src="/logo.png"
               alt="Lumbini-Province-Police-Logo"
@@ -36,7 +44,7 @@ export function Navigation() {
                 POLICE HACKATHON 2083
               </span>
             </div>
-          </div>
+          </button>
 
           <div className="hidden lg:flex items-center gap-8">
             {navLinks.map((l) => (
