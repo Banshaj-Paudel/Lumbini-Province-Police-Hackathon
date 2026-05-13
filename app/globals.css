@@ -2,10 +2,10 @@
 
 :root {
   --background: #EEEEF8;
-  --foreground: hsl(236, 51%, 20%);
-  --border: rgba(45, 53, 131, 0.12);
-  --midnight: #001A33;
-  --indigo: #2d3583;
+  --foreground: #004163;
+  --border: rgba(0, 65, 99, 0.12);
+  --midnight: #004163;
+  --indigo: #004163;
   --crimson: #DC143C;
   --gold: #D4AF37;
   --soft: #EEEEF8;

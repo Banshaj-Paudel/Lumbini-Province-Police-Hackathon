@@ -12,7 +12,7 @@ export function FAQ() {
     {
       question: "Who can participate in the hackathon?",
       answer:
-        "The hackathon is open to all Nepalese developers and tech enthusiasts. Teams of 3-4 members are required. No experience requirement — beginners and experts alike can participate.",
+        "The hackathon is open to all Nepalese developers and tech enthusiasts. Teams of 3-4 members are required. No experience requirement beginners and experts alike can participate.",
     },
     {
       question: "What is the registration fee?",
@@ -32,7 +32,7 @@ export function FAQ() {
     {
       question: "Are there any prerequisites or technical skills required?",
       answer:
-        "No specific prerequisites. The event welcomes developers of all skill levels. Choose a track that interests you and build something great within the 36-hour timeframe.",
+        "No specific prerequisites. The event welcomes developers, designers, and other creative professionals of all skill levels. Choose a track that interests you and build something great within the 36-hour timeframe.",
     },
     {
       question: "What happens after the hackathon?",

@@ -53,7 +53,7 @@ export function BentoGrid() {
           <p className="font-mono font-bold text-xs tracking-widest uppercase text-gold">
             ORGANIZED BY
           </p>
-          <p className="mt-4 font-sans font-black text-2xl md:text-3xl uppercase tracking-tight text-foreground">
+          <p className="mt-4 font-sans font-black text-3xl md:text-3xl uppercase tracking-tight text-foreground">
             LUMBINI PROVINCE POLICE
           </p>
         </motion.div>
