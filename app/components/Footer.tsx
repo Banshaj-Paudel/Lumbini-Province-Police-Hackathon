@@ -13,8 +13,8 @@ export function Footer() {
               <Image
                 src="/logo.png"
                 alt="Nepal Police"
-                  width={48}
-                  height={48}
+                width={48}
+                height={48}
                 className="h-12 w-12 object-contain"
               />
               <div className="flex flex-col leading-tight">
