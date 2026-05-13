@@ -28,9 +28,9 @@ export function Hero() {
               letterSpacing: "-0.04em",
             }}
           >
-            LUMBINI POLICE
+            LUMBINI PROVINCE POLICE
             <br />
-            HACKATHON<span className="text-crimson">.</span>
+            HACKATHON 2083<span className="text-crimson">.</span>
           </h1>
           <p className="font-mono text-sm uppercase tracking-widest text-white/60">
             INNOVATION FOR SECURE DIGITAL NEPAL

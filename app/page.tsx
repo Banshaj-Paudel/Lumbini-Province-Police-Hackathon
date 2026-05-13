@@ -8,6 +8,8 @@ import { Timeline } from "./components/Timeline";
 import { Judges } from "./components/Judges";
 import { Mentors } from "./components/Mentors";
 import { WhyJoin } from "./components/WhyJoin";
+import { EventDetails } from "./components/EventDetails";
+import { FAQ } from "./components/FAQ";
 import { OrganizingTeam } from "./components/OrganizingTeam";
 import { Register } from "./components/Register";
 import { Footer } from "./components/Footer";
@@ -19,13 +21,16 @@ export default function Home() {
       <Navigation />
       <Hero />
       <BentoGrid />
+      <EventDetails />
+      <WhyJoin />
       <Tracks />
       <HimalayanDivider />
       <Timeline />
       <Judges />
       <Mentors />
-      <WhyJoin />
       <OrganizingTeam />
+            <FAQ />
+
       <Register />
       <Footer />
     </div>

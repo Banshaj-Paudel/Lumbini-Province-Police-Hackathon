@@ -1,5 +1,6 @@
 import { Mail, MapPin, Globe } from "lucide-react";
 import { navLinks } from "../lib/constants";
+import Image from "next/image";
 
 export function Footer() {
   return (
@@ -9,9 +10,11 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
           <div>
             <div className="flex items-center gap-3">
-              <img
-                src="/logo.jpg"
+              <Image
+                src="/logo.png"
                 alt="Nepal Police"
+                  width={48}
+                  height={48}
                 className="h-12 w-12 object-contain"
               />
               <div className="flex flex-col leading-tight">
@@ -55,7 +58,7 @@ export function Footer() {
               <li className="flex items-center gap-3">
                 <Mail size={14} className="text-gold shrink-0" />
                 <span className="font-mono text-xs text-white/60">
-                  hackathon@lumbinipolice.gov.np
+                  ujjwalkhadka@nepalpolice.gov.np
                 </span>
               </li>
               <li className="flex items-center gap-3">

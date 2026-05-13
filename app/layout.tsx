@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Inter, JetBrains_Mono } from "next/font/google";
+import { SchemaMarkup } from "./components/SchemaMarkup";
 import "./globals.css";
 
 const inter = Inter({
@@ -15,9 +16,46 @@ const jetbrains = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Lumbini Province Police Hackathon 2026",
+  title: "Lumbini Province Police Hackathon 2083 | Jestha 30-31, 2083 | Free Developer Competition",
   description:
-    "Innovation for Secure Digital Nepal — June 13-14, 2026, Butwal, Lumbini Province.",
+    "Join Nepal's premier police hackathon in Butwal, Lumbini Province. 36-hour innovation sprint for developers. NPR 1,00,000 prize pool. Free registration. Build AI, IoT, and citizen-police tech solutions.",
+  keywords: [
+    "Lumbini Province Police Hackathon 2083",
+    "Nepal Police Hackathon",
+    "Butwal Hackathon",
+    "Cyber Forensic AI",
+    "IoT Public Safety",
+    "Citizen Police Tech",
+    "Lumbini Province Technology",
+    "Nepal Developer Competition",
+    "Police Innovation Challenge",
+    "Digital Public Safety Nepal",
+  ].join(", "),
+  authors: [{ name: "Lumbini Province Police" }],
+  creator: "Lumbini Province Police",
+  publisher: "Lumbini Province Police",
+  robots: "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  viewport: "width=device-width, initial-scale=1, maximum-scale=5",
+  openGraph: {
+    type: "website",
+    locale: "en_US",
+    url: "https://hackathon.nepalpolice.gov.np",
+    title: "Lumbini Province Police Hackathon 2083",
+    description:
+      "36-hour innovation sprint for developers. Build solutions for public safety, IoT, and citizen engagement. NPR 1,00,000 prize pool.",
+    siteName: "Lumbini Province Police Hackathon",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Lumbini Province Police Hackathon 2026",
+    description: "Join Nepal's premier police hackathon. Free registration. 36-hour innovation sprint.",
+  },
+  alternates: {
+    languages: {
+      en: "https://hackathon.nepalpolice.gov.np",
+      ne: "https://hackathon.nepalpolice.gov.np/ne",
+    },
+  },
 };
 
 export default function RootLayout({
@@ -30,6 +68,12 @@ export default function RootLayout({
       lang="en"
       className={`${inter.variable} ${jetbrains.variable} h-full antialiased`}
     >
+      <head>
+        <SchemaMarkup />
+        <meta name="google-site-verification" content="verification-code-here" />
+        <meta name="msvalidate.01" content="verification-code-here" />
+        <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
+      </head>
       <body className="min-h-full flex flex-col">{children}</body>
     </html>
   );

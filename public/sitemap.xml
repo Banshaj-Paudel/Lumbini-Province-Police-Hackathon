@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
+        xmlns:mobile="http://www.mobile.googlebot.org/schemas/mobile/1.0/">
+  <!-- Home Page - Crawl Daily for Updates -->
+  <url>
+    <loc>https://hackathon.nepalpolice.gov.np</loc>
+    <lastmod>2083-05-13T12:00:00+05:45</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <!-- Event Details/About - Daily Crawl (Important Info) -->
+  <url>
+    <loc>https://hackathon.nepalpolice.gov.np#about</loc>
+    <lastmod>2083-05-13T12:00:00+05:45</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.95</priority>
+  </url>
+
+  <!-- Hackathon Tracks - Daily Crawl (Core Content) -->
+  <url>
+    <loc>https://hackathon.nepalpolice.gov.np#tracks</loc>
+    <lastmod>2083-05-13T12:00:00+05:45</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.95</priority>
+  </url>
+
+  <!-- Event Timeline - Daily Crawl (Critical Info) -->
+  <url>
+    <loc>https://hackathon.nepalpolice.gov.np#timeline</loc>
+    <lastmod>2083-05-13T12:00:00+05:45</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Judges Panel - Daily Crawl (Important Community Info) -->
+  <url>
+    <loc>https://hackathon.nepalpolice.gov.np#judges</loc>
+    <lastmod>2083-05-13T12:00:00+05:45</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <!-- Mentors Section - Daily Crawl (Important Community Info) -->
+  <url>
+    <loc>https://hackathon.nepalpolice.gov.np#mentors</loc>
+    <lastmod>2083-05-13T12:00:00+05:45</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <!-- Event Details Card - Daily Crawl (Key Information) -->
+  <url>
+    <loc>https://hackathon.nepalpolice.gov.np#event-details</loc>
+    <lastmod>2083-05-13T12:00:00+05:45</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- FAQ Section - Daily Crawl (Featured Snippet Optimization) -->
+  <url>
+    <loc>https://hackathon.nepalpolice.gov.np#faq</loc>
+    <lastmod>2083-05-13T12:00:00+05:45</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Why Join Section - Daily Crawl (Engagement Content) -->
+  <url>
+    <loc>https://hackathon.nepalpolice.gov.np#why-join</loc>
+    <lastmod>2083-05-13T12:00:00+05:45</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <!-- Registration/CTA - HOURLY CRAWL (Most Critical) -->
+  <url>
+    <loc>https://hackathon.nepalpolice.gov.np#register</loc>
+    <lastmod>2083-05-13T12:00:00+05:45</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+</urlset>

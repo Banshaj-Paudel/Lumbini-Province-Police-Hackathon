@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
 import { navLinks } from "../lib/constants";
+import Image from "next/image";
 
 export function Navigation() {
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -12,10 +13,13 @@ export function Navigation() {
       <nav className="sticky top-0 z-50 bg-white/96 backdrop-blur-sm border-b border-border shadow-sm">
         <div className="mx-auto max-w-7xl px-6 md:px-10 h-16 flex items-center justify-between">
           <div className="flex items-center gap-3">
-            <img
-              src="/logo.jpg"
-              alt="Nepal Police"
+            <Image
+              src="/logo.png"
+              alt="Lumbini-Province-Police-Logo"
+              title="Lumbini Province Police Hackathon 2083"
               className="h-12 w-12 object-contain"
+              width={48}
+              height={48}
             />
             <div className="flex flex-col leading-tight">
               <span className="font-mono font-bold text-sm tracking-widest uppercase text-gold">
