@@ -5,10 +5,10 @@ import { Award, Target, MapPin } from "lucide-react";
 
 export function Hero() {
   return (
-    <section className="relative w-full bg-midnight text-white hero-clip overflow-hidden">
-      <div className="absolute inset-0 dhaka-weave-dark pointer-events-none" />
-      <div className="relative mx-auto max-w-7xl px-6 md:px-10 py-32 md:py-44 grid grid-cols-1 lg:grid-cols-[1fr_420px] gap-12 items-center">
-        <motion.div
+    <section className="relative w-full bg-midnight text-white hero-clip overflow-hidden" aria-label="Lumbini Police Hackathon hero section">
+      <div className="absolute inset-0 dhaka-weave-dark pointer-events-none" aria-hidden="true" />
+      <div className="relative mx-auto max-w-7xl px-6 md:px-10 py-20 md:py-32 grid grid-cols-1 lg:grid-cols-[1fr_420px] gap-12 items-center">
+        <motion.article
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
@@ -52,55 +52,56 @@ export function Hero() {
               View Tracks
             </a>
           </div>
-        </motion.div>
+        </motion.article>
 
-        <motion.div
+        <motion.aside
           initial={{ opacity: 0, x: 40 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
           className="relative hidden lg:block border border-white/10 bg-white/5 p-8"
+          aria-label="Hackathon quick details"
         >
-          <span className="absolute top-0 left-0 right-0 h-1 bg-gold" />
-          <span className="absolute top-0 bottom-0 right-0 w-1 bg-gold/30" />
-          <p className="font-mono font-bold text-xs tracking-widest uppercase text-gold mb-6">
+          <span className="absolute top-0 left-0 right-0 h-1 bg-gold" aria-hidden="true" />
+          <span className="absolute top-0 bottom-0 right-0 w-1 bg-gold/30" aria-hidden="true" />
+          <h2 className="font-mono font-bold text-xs tracking-widest uppercase text-gold mb-6">
             HACKATHON OVERVIEW
-          </p>
-          <div className="flex flex-col">
+          </h2>
+          <dl className="flex flex-col">
             <div className="flex items-start gap-4 py-4 border-b border-white/10">
-              <Award className="text-gold shrink-0" size={22} />
+              <Award className="text-gold shrink-0" size={22} aria-hidden="true" />
               <div>
-                <p className="font-sans font-bold text-white">
+                <dt className="font-sans font-bold text-white">
                   NPR 1,00,000 Prize Pool
-                </p>
-                <p className="font-mono text-xs text-white/50 mt-1">
+                </dt>
+                <dd className="font-mono text-xs text-white/50 mt-1">
                   Cash prizes + Government recognition certificates
-                </p>
+                </dd>
               </div>
             </div>
             <div className="flex items-start gap-4 py-4 border-b border-white/10">
-              <Target className="text-gold shrink-0" size={22} />
+              <Target className="text-gold shrink-0" size={22} aria-hidden="true" />
               <div>
-                <p className="font-sans font-bold text-white">
+                <dt className="font-sans font-bold text-white">
                   36-Hour Build Sprint
-                </p>
-                <p className="font-mono text-xs text-white/50 mt-1">
+                </dt>
+                <dd className="font-mono text-xs text-white/50 mt-1">
                   Continuous hackathon, Jestha 30-31, 2083
-                </p>
+                </dd>
               </div>
             </div>
             <div className="flex items-start gap-4 py-4">
-              <MapPin className="text-gold shrink-0" size={22} />
+              <MapPin className="text-gold shrink-0" size={22} aria-hidden="true" />
               <div>
-                <p className="font-sans font-bold text-white">
+                <dt className="font-sans font-bold text-white">
                   Butwal, Lumbini Province
-                </p>
-                <p className="font-mono text-xs text-white/50 mt-1">
+                </dt>
+                <dd className="font-mono text-xs text-white/50 mt-1">
                   Venue details shared after registration
-                </p>
+                </dd>
               </div>
             </div>
-          </div>
-        </motion.div>
+          </dl>
+        </motion.aside>
       </div>
     </section>
   );
