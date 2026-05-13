@@ -4,7 +4,7 @@ export function SchemaMarkup() {
     "@type": "Event",
     name: "Lumbini Province Police Hackathon 2083",
     description:
-      "36-hour innovation sprint for developers building solutions for public safety, IoT, and citizen engagement in Lumbini Province.",
+      "Join Nepal's premier police hackathon in Butwal, Lumbini Province. 36-hour innovation sprint for developers building solutions for public safety, IoT, and citizen engagement in Lumbini Province.",
     startDate: "2083-06-30",
     endDate: "2083-07-01",
     eventStatus: "https://schema.org/EventScheduled",

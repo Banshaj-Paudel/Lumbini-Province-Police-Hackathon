@@ -16,7 +16,7 @@ const jetbrains = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Lumbini Province Police Hackathon 2083 | Jestha 30-31, 2083 | Free Developer Competition",
+  title: "Lumbini Province Police Hackathon 2083 | Jestha 30-31, 2083 |",
   description:
     "Join Nepal's premier police hackathon in Butwal, Lumbini Province. 36-hour innovation sprint for developers. NPR 1,00,000 prize pool. Free registration. Build AI, IoT, and citizen-police tech solutions.",
   keywords: [
@@ -42,13 +42,23 @@ export const metadata: Metadata = {
     url: "https://hackathon.nepalpolice.gov.np",
     title: "Lumbini Province Police Hackathon 2083",
     description:
-      "36-hour innovation sprint for developers. Build solutions for public safety, IoT, and citizen engagement. NPR 1,00,000 prize pool.",
+      "Join Nepal's premier police hackathon in Butwal, Lumbini Province. 36-hour innovation sprint for developers. Build solutions for public safety, IoT, and citizen engagement. NPR 1,00,000 prize pool.",
     siteName: "Lumbini Province Police Hackathon",
+    images: [
+      {
+        url: "https://hackathon.nepalpolice.gov.np/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Lumbini Province Police Hackathon 2083 - 36-hour innovation sprint",
+        type: "image/png",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Lumbini Province Police Hackathon 2026",
+    title: "Lumbini Province Police Hackathon 2083",
     description: "Join Nepal's premier police hackathon. Free registration. 36-hour innovation sprint.",
+    images: ["https://hackathon.nepalpolice.gov.np/og-image.png"],
   },
   alternates: {
     languages: {

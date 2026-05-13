@@ -80,6 +80,7 @@ export const faqKeywords = {
 export const contentTargets = {
   hero: [
     "Nepal's premier police technology hackathon",
+    "Join Nepal's premier police hackathon in Butwal, Lumbini Province",
     "36-hour innovation sprint for developers",
     "Build solutions for public safety and community engagement",
   ],
