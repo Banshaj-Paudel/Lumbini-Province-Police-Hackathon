@@ -39,6 +39,9 @@ export const seoKeywords = {
     "hackathon",
     "innovation",
     "developers",
+    "designer",
+    "programmers",
+    
     "technology",
     "public safety",
     "AI",
@@ -81,7 +84,7 @@ export const contentTargets = {
   hero: [
     "Nepal's premier police technology hackathon",
     "Join Nepal's premier police hackathon in Butwal, Lumbini Province",
-    "36-hour innovation sprint for developers",
+    "36-hour innovation sprint for developers and tech enthusiasts",
     "Build solutions for public safety and community engagement",
   ],
   tracks: [

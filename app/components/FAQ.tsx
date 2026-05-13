@@ -12,12 +12,12 @@ export function FAQ() {
     {
       question: "Who can participate in the hackathon?",
       answer:
-        "The hackathon is open to all Nepalese developers and tech enthusiasts. Teams of 3-4 members are required. No experience requirement beginners and experts alike can participate.",
+        "The hackathon is open to all Nepalese developers, programmers, designers and tech enthusiasts. Teams of 3-4 members are required. No experience requirement beginners and experts alike can participate.",
     },
     {
       question: "What is the registration fee?",
       answer:
-        "The hackathon is completely FREE to participate! There is no registration charge. All developers are welcome to join and showcase their skills.",
+        "The hackathon is completely FREE to participate! There is no registration charge. All developers, designers, tech enthusiasts are welcome to join and showcase their skills.",
     },
     {
       question: "Do I need to have a team before registering?",

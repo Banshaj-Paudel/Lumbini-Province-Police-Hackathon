@@ -57,21 +57,30 @@ export function Footer() {
             <ul className="flex flex-col gap-4">
               <li className="flex items-center gap-3">
                 <Mail size={14} className="text-gold shrink-0" />
-                <span className="font-mono text-xs text-white/60">
+                <a
+                  href="mailto:ujjwalkhadka@nepalpolice.gov.np"
+                  className="font-mono text-xs text-white/60 hover:text-gold transition-colors"
+                >
                   ujjwalkhadka@nepalpolice.gov.np
-                </span>
+                </a>
               </li>
               <li className="flex items-center gap-3">
                 <Phone size={14} className="text-gold shrink-0" />
-                <span className="font-mono text-xs text-white/60">
-                  9851288989
-                </span>
+                <a
+                  href="tel:+97798512889889"
+                  className="font-mono text-xs text-white/60 hover:text-gold transition-colors"
+                >
+                  +977 9851288989
+                </a>
               </li>
               <li className="flex items-center gap-3">
                 <Phone size={14} className="text-gold shrink-0" />
-                <span className="font-mono text-xs text-white/60">
-                  9862255871
-                </span>
+                <a
+                  href="tel:+977986225587"
+                  className="font-mono text-xs text-white/60 hover:text-gold transition-colors"
+                >
+                  +977 9862255871
+                </a>
               </li>
               <li className="flex items-center gap-3">
                 <MapPin size={14} className="text-gold shrink-0" />
@@ -81,9 +90,14 @@ export function Footer() {
               </li>
               <li className="flex items-center gap-3">
                 <Globe size={14} className="text-gold shrink-0" />
-                <span className="font-mono text-xs text-white/60">
-                  lumbinipolice.gov.np
-                </span>
+                <a
+                  href="https://lumbini.nepalpolice.gov.np"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="font-mono text-xs text-white/60 hover:text-gold transition-colors"
+                >
+                  lumbini.nepalpolice.gov.np
+                </a>
               </li>
             </ul>
           </div>

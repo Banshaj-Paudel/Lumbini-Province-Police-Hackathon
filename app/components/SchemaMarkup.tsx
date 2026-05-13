@@ -34,7 +34,7 @@ export function SchemaMarkup() {
     organizer: {
       "@type": "Organization",
       name: "Lumbini Province Police",
-      url: "https://lumbinipolice.gov.np",
+      url: "https://lumbini.nepalpolice.gov.np",
       logo: "https://hackathon.nepalpolice.gov.np/logo.png",
       sameAs: [
         "https://www.facebook.com/lumbinipolice",
@@ -53,9 +53,9 @@ export function SchemaMarkup() {
     "@type": "LocalBusiness",
     name: "Lumbini Province Police",
     description: "Law enforcement agency organizing digital innovation hackathon",
-    url: "https://lumbinipolice.gov.np",
+    url: "https://lumbini.nepalpolice.gov.np",
     telephone: "+977-71-1234567",
-    email: "hackathon@lumbinipolice.gov.np",
+    email: "hackathon@lumbini.nepalpolice.gov.np",
     address: {
       "@type": "PostalAddress",
       addressLocality: "Butwal",
