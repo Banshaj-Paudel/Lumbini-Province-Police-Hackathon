@@ -33,7 +33,7 @@ export function Navigation() {
                   letterSpacing: "0.2em",
                 }}
               >
-                POLICE HACKATHON 2026
+                POLICE HACKATHON 2083
               </span>
             </div>
           </div>

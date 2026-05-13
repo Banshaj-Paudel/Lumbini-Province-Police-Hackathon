@@ -40,14 +40,9 @@ export function FAQ() {
         "Winning projects will receive cash prizes and government recognition certificates. Outstanding projects may have opportunities for further collaboration with Lumbini Province Police.",
     },
     {
-      question: "Can I participate remotely?",
-      answer:
-        "Details on remote participation options will be announced with the final schedule. Stay tuned for more information.",
-    },
-    {
       question: "What are the judging criteria?",
       answer:
-        "Projects are evaluated on innovation, implementation quality, relevance to public safety, user experience, and potential impact. The evaluation panel consists of industry experts and government officials.",
+        "Judging criteria will be announced closer to the event date."
     },
   ];
 

@@ -28,9 +28,9 @@ export function Hero() {
               letterSpacing: "-0.04em",
             }}
           >
-            LUMBINI PROVINCE POLICE
+            LUMBINI POLICE
             <br />
-            HACKATHON 2083<span className="text-crimson">.</span>
+            HACKATHON<span className="text-crimson">.</span>
           </h1>
           <p className="font-mono text-sm uppercase tracking-widest text-white/60">
             INNOVATION FOR SECURE DIGITAL NEPAL
@@ -84,7 +84,7 @@ export function Hero() {
                   36-Hour Build Sprint
                 </p>
                 <p className="font-mono text-xs text-white/50 mt-1">
-                  Continuous hackathon, June 13-14, 2026
+                  Continuous hackathon, Jestha 30-31, 2083
                 </p>
               </div>
             </div>
