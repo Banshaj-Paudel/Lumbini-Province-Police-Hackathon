@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Inter, JetBrains_Mono } from "next/font/google";
 import { SchemaMarkup } from "./components/SchemaMarkup";
 import "./globals.css";
@@ -35,7 +35,6 @@ export const metadata: Metadata = {
   creator: "Lumbini Province Police",
   publisher: "Lumbini Province Police",
   robots: "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
-  viewport: "width=device-width, initial-scale=1, maximum-scale=5",
   openGraph: {
     type: "website",
     locale: "en_US",
@@ -66,6 +65,12 @@ export const metadata: Metadata = {
       ne: "https://hackathon.nepalpolice.gov.np/ne",
     },
   },
+};
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 5,
 };
 
 export default function RootLayout({
