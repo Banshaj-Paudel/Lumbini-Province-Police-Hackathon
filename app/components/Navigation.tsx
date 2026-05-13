@@ -30,13 +30,13 @@ export function Navigation() {
               height={48}
             />
             <div className="flex flex-col leading-tight">
-              <span className="font-mono font-bold text-left text-sm tracking-widest uppercase text-gold text-[#004163]">
+              <span className="font-mono font-bold text-left text-sm tracking-widest uppercase text-[#004163]">
                 LUMBINI PROVINCE
               </span>
               <span
                 className="font-mono text-xs uppercase"
                 style={{
-                  color: "#ddbf5f",
+                  
                   opacity: 0.6,
                   letterSpacing: "0.2em",
                 }}

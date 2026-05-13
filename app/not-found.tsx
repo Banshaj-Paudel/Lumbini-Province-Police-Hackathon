@@ -25,7 +25,7 @@ export default function NotFound() {
       <div className="relative z-10 w-full max-w-4xl">
         {/* Animation Section */}
         {animationData && (
-          <div className="mb-8 flex justify-center h-64 md:h-80">
+          <div className="mb-12 flex justify-center h-64 md:h-80">
             <div className="w-full max-w-md">
               <Lottie
                 animationData={animationData}
@@ -42,20 +42,19 @@ export default function NotFound() {
 
         {/* Text Content */}
         <div className="text-center">
-        
           {/* Heading */}
-          <h1 className="text-5xl md:text-6xl font-black uppercase font-sans mb-3 text-foreground tracking-tight leading-tight">
+          <h1 className="text-5xl md:text-6xl font-black uppercase font-sans mb-4 text-foreground tracking-tight leading-tight">
             Page Not <span className="text-crimson">Found</span>
           </h1>
 
           {/* Subheading */}
           <p className="text-lg md:text-xl text-foreground/60 font-mono mb-12 max-w-2xl mx-auto leading-relaxed">
-            The page you&apos;re looking for has drifted into space. It might have been moved,
-            deleted, or perhaps never existed. Let&apos;s help you find your way back.
+            The page you&apos;re looking for is unavailable. It may have been moved, removed, or
+            the URL might be incorrect. Please check and try again or return to the homepage.
           </p>
 
           {/* Action Buttons */}
-          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               href="/"
               className="group inline-flex items-center justify-center gap-3 bg-crimson text-white font-mono font-bold text-sm uppercase tracking-widest px-8 py-4 hover:shadow-lg hover:shadow-crimson/50 transition-all duration-300 transform hover:scale-105"
