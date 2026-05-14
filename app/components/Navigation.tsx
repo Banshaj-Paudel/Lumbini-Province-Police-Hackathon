@@ -31,17 +31,17 @@ export function Navigation() {
             />
             <div className="flex flex-col leading-tight">
               <span className="font-mono font-bold text-left text-sm tracking-widest uppercase text-[#004163]">
-                LUMBINI PROVINCE
+                LUMBINI PROVINCE POLICE
               </span>
               <span
                 className="font-mono text-xs uppercase"
                 style={{
-                  
+                  textAlign: "left",
                   opacity: 0.6,
                   letterSpacing: "0.2em",
                 }}
               >
-                POLICE HACKATHON 2083
+                 HACKATHON 2083
               </span>
             </div>
           </button>
