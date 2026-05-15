@@ -49,7 +49,7 @@ export function Hero() {
               disabled
               className="btn-primary inline-flex items-center bg-crimson text-white px-8 py-4 font-mono font-bold text-sm uppercase tracking-widest cursor-not-allowed"
             >
-              Registration Opening Soon ›
+              Registration Opening Soon
             </button>
             <a
               href="#tracks"
