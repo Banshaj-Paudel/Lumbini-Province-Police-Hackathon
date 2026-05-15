@@ -40,7 +40,7 @@ export function Hero() {
           </p>
           <div className="flex flex-wrap gap-4 mt-2">
             <span
-              aria-disabled="true"
+              aria-disabled={true}
               className="btn-primary inline-flex items-center bg-crimson text-white px-8 py-4 font-mono font-bold text-sm uppercase tracking-widest cursor-not-allowed"
             >
               Registration Opening Soon ›
