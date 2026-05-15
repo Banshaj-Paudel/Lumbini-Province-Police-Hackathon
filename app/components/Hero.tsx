@@ -39,12 +39,12 @@ export function Hero() {
             Jestha 30-31, 2083 | Butwal, Lumbini Province
           </p>
           <div className="flex flex-wrap gap-4 mt-2">
-            <a
-              href="#register"
-              className="btn-primary inline-flex items-center bg-crimson text-white px-8 py-4 font-mono font-bold text-sm uppercase tracking-widest"
+            <span
+              aria-disabled="true"
+              className="btn-primary inline-flex items-center bg-crimson text-white px-8 py-4 font-mono font-bold text-sm uppercase tracking-widest cursor-not-allowed"
             >
               Registration Opening Soon ›
-            </a>
+            </span>
             <a
               href="#tracks"
               className="inline-flex items-center border-2 border-white/30 text-white/80 px-8 py-4 font-mono font-bold text-sm uppercase tracking-widest hover:border-white transition-colors"
