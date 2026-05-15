@@ -37,7 +37,7 @@ export function Hero() {
             HACK FOR SAFETY
             <span className="text-crimson">.</span>
           </h1>
-          <p className="font-mono text-2xl uppercase tracking-widest text-white/60">
+          <p className="font-mono text-md sm:text-2xl uppercase tracking-widest text-white/60">
             Lumbini Province Police HACKATHON 2083
           </p>
           <p className="font-mono text-white/50 border-l-2 border-crimson pl-5">
