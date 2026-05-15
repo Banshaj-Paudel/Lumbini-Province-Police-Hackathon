@@ -4,18 +4,18 @@ export function SchemaMarkup() {
     "@type": "Event",
     name: "Lumbini Province Police Hackathon 2083",
     description:
-      "Join Nepal's premier police hackathon in Butwal, Lumbini Province. 36-hour innovation sprint for developers building solutions for public safety, IoT, and citizen engagement in Lumbini Province.",
+      "Join Nepal's premier police hackathon at Police Training Centre, Butwal, Rupandehi. 36-hour innovation sprint for developers building solutions for public safety, IoT, and citizen engagement.",
     startDate: "2083-06-30",
     endDate: "2083-07-01",
     eventStatus: "https://schema.org/EventScheduled",
     eventAttendanceMode: "https://schema.org/OfflineEventAttendanceMode",
     location: {
       "@type": "Place",
-      name: "Butwal",
+      name: "Police Training Centre, Butwal, Rupandehi",
       address: {
         "@type": "PostalAddress",
         addressLocality: "Butwal",
-        addressRegion: "Lumbini Province",
+        addressRegion: "Rupandehi",
         postalCode: "32900",
         addressCountry: "NP",
       },
@@ -59,7 +59,7 @@ export function SchemaMarkup() {
     address: {
       "@type": "PostalAddress",
       addressLocality: "Butwal",
-      addressRegion: "Lumbini Province",
+      addressRegion: "Rupandehi",
       postalCode: "32900",
       addressCountry: "NP",
     },
@@ -103,7 +103,7 @@ export function SchemaMarkup() {
         name: "When is the Lumbini Police Hackathon happening?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "The hackathon is scheduled for Jestha 30-31, 2083 (June 13-14, 2026) in Butwal, Lumbini Province.",
+          text: "The hackathon is scheduled for Jestha 30-31, 2083 (June 13-14, 2026) at Police Training Centre, Butwal, Rupandehi.",
         },
       },
     ],

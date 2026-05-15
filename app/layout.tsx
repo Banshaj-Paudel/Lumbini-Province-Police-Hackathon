@@ -18,7 +18,7 @@ const jetbrains = JetBrains_Mono({
 export const metadata: Metadata = {
   title: "Lumbini Province Police Hackathon 2083 | Jestha 30-31, 2083 |",
   description:
-    "Join Nepal's premier police hackathon in Butwal, Lumbini Province. 36-hour innovation sprint for developers. NPR 1,00,000 prize pool. Free registration. Build AI, IoT, and citizen-police tech solutions.",
+    "Join Nepal's premier police hackathon at Police Training Centre, Butwal, Rupandehi. 36-hour innovation sprint for developers. NPR 1,00,000 prize pool. Free registration. Build AI, IoT, and citizen-police tech solutions.",
   keywords: [
     "Lumbini Province Police Hackathon 2083",
     "Nepal Police Hackathon",
@@ -41,7 +41,7 @@ export const metadata: Metadata = {
     url: "https://hackathon.nepalpolice.gov.np",
     title: "Lumbini Province Police Hackathon 2083",
     description:
-      "Join Nepal's premier police hackathon in Butwal, Lumbini Province. 36-hour innovation sprint for developers. Build solutions for public safety, IoT, and citizen engagement. NPR 1,00,000 prize pool.",
+      "Join Nepal's premier police hackathon at Police Training Centre, Butwal, Rupandehi. 36-hour innovation sprint for developers. Build solutions for public safety, IoT, and citizen engagement. NPR 1,00,000 prize pool.",
     siteName: "Lumbini Province Police Hackathon",
     images: [
       {

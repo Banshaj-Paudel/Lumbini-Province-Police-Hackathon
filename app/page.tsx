@@ -3,6 +3,7 @@ import { Navigation } from "./components/Navigation";
 import { Hero } from "./components/Hero";
 import { BentoGrid } from "./components/BentoGrid";
 import { EventDetails } from "./components/EventDetails";
+import { FirstGovernmentHackathon } from "./components/FirstGovernmentHackathon";
 import { WhyJoin } from "./components/WhyJoin";
 import { Tracks } from "./components/Tracks";
 import { HimalayanDivider } from "./components/HimalayanDivider";
@@ -24,9 +25,11 @@ export default function Home() {
       <Hero />
       <BentoGrid />
       <EventDetails />
-      <WhyJoin />
+      <FirstGovernmentHackathon />
       <Tracks />
+
       <HimalayanDivider />
+      <WhyJoin />
       <Timeline />
       <Judges />
       <Mentors />

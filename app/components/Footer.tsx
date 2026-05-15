@@ -85,7 +85,7 @@ export function Footer() {
               <li className="flex items-center gap-3">
                 <MapPin size={14} className="text-gold shrink-0" />
                 <span className="font-mono text-xs text-white/60">
-                  Butwal, Lumbini Province, Nepal
+                  Police Training Centre, Butwal, Rupandehi
                 </span>
               </li>
               <li className="flex items-center gap-3">

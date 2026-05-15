@@ -5,8 +5,14 @@ import { Award, Target, MapPin } from "lucide-react";
 
 export function Hero() {
   return (
-    <section className="relative w-full bg-midnight text-white hero-clip overflow-hidden" aria-label="Lumbini Police Hackathon hero section">
-      <div className="absolute inset-0 dhaka-weave-dark pointer-events-none" aria-hidden="true" />
+    <section
+      className="relative w-full bg-midnight text-white hero-clip overflow-hidden"
+      aria-label="Lumbini Police Hackathon hero section"
+    >
+      <div
+        className="absolute inset-0 dhaka-weave-dark pointer-events-none"
+        aria-hidden="true"
+      />
       <div className="relative mx-auto max-w-7xl px-6 md:px-10 py-20 md:py-32 grid grid-cols-1 lg:grid-cols-[1fr_420px] gap-12 items-center">
         <motion.article
           initial={{ opacity: 0, y: 20 }}
@@ -15,7 +21,7 @@ export function Hero() {
           className="flex flex-col gap-6"
         >
           <div className="flex items-center gap-3">
-            <span className="block h-px w-[10px] bg-gold" />
+            <span className="block h-px w-2.5-gold" />
             <span className="font-mono font-bold text-xs tracking-widest uppercase text-gold">
               PRESENTED BY NEPAL POLICE
             </span>
@@ -28,15 +34,14 @@ export function Hero() {
               letterSpacing: "-0.04em",
             }}
           >
-            LUMBINI POLICE
-            <br />
-            HACKATHON<span className="text-crimson">.</span>
+            HACK FOR SAFETY
+            <span className="text-crimson">.</span>
           </h1>
-          <p className="font-mono text-sm uppercase tracking-widest text-white/60">
-            INNOVATION FOR SECURE DIGITAL NEPAL
+          <p className="font-mono text-2xl uppercase tracking-widest text-white/60">
+            Lumbini Province Police HACKATHON 2083
           </p>
           <p className="font-mono text-white/50 border-l-2 border-crimson pl-5">
-            Jestha 30-31, 2083 | Butwal, Lumbini Province
+            Jestha 30-31, 2083 | Police Training Centre, Butwal, Rupandehi
           </p>
           <div className="flex flex-wrap gap-4 mt-2">
             <button
@@ -62,14 +67,24 @@ export function Hero() {
           className="relative hidden lg:block border border-white/10 bg-white/5 p-8"
           aria-label="Hackathon quick details"
         >
-          <span className="absolute top-0 left-0 right-0 h-1 bg-gold" aria-hidden="true" />
-          <span className="absolute top-0 bottom-0 right-0 w-1 bg-gold/30" aria-hidden="true" />
+          <span
+            className="absolute top-0 left-0 right-0 h-1 bg-gold"
+            aria-hidden="true"
+          />
+          <span
+            className="absolute top-0 bottom-0 right-0 w-1 bg-gold/30"
+            aria-hidden="true"
+          />
           <h2 className="font-mono font-bold text-xs tracking-widest uppercase text-gold mb-6">
             HACKATHON OVERVIEW
           </h2>
           <dl className="flex flex-col">
             <div className="flex items-start gap-4 py-4 border-b border-white/10">
-              <Award className="text-gold shrink-0" size={22} aria-hidden="true" />
+              <Award
+                className="text-gold shrink-0"
+                size={22}
+                aria-hidden="true"
+              />
               <div>
                 <dt className="font-sans font-bold text-white">
                   NPR 1,00,000 Prize Pool
@@ -80,7 +95,11 @@ export function Hero() {
               </div>
             </div>
             <div className="flex items-start gap-4 py-4 border-b border-white/10">
-              <Target className="text-gold shrink-0" size={22} aria-hidden="true" />
+              <Target
+                className="text-gold shrink-0"
+                size={22}
+                aria-hidden="true"
+              />
               <div>
                 <dt className="font-sans font-bold text-white">
                   36-Hour Build Sprint
@@ -91,13 +110,17 @@ export function Hero() {
               </div>
             </div>
             <div className="flex items-start gap-4 py-4">
-              <MapPin className="text-gold shrink-0" size={22} aria-hidden="true" />
+              <MapPin
+                className="text-gold shrink-0"
+                size={22}
+                aria-hidden="true"
+              />
               <div>
                 <dt className="font-sans font-bold text-white">
-                  Butwal, Lumbini Province
+                  Police Training Centre, Butwal, Rupandehi
                 </dt>
                 <dd className="font-mono text-xs text-white/50 mt-1">
-                  Venue details shared after registration
+                  Police Training Centre, Butwal, Rupandehi
                 </dd>
               </div>
             </div>

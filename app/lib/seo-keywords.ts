@@ -29,11 +29,11 @@ export const seoKeywords = {
     "Police technology innovation competition Nepal",
   ],
   location: [
+    "Police Training Centre",
     "Butwal",
-    "Lumbini Province",
+    "Rupandehi",
     "Nepal",
-    "Butwal Tech Hub",
-    "Lumbini Developer Community",
+    "Police Training Facility",
   ],
   semantic: [
     "hackathon",
@@ -83,7 +83,7 @@ export const faqKeywords = {
 export const contentTargets = {
   hero: [
     "Nepal's premier police technology hackathon",
-    "Join Nepal's premier police hackathon in Butwal, Lumbini Province",
+    "Join Nepal's premier police hackathon at Police Training Centre, Butwal, Rupandehi",
     "36-hour innovation sprint for developers and tech enthusiasts",
     "Build solutions for public safety and community engagement",
   ],

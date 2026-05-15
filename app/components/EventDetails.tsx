@@ -24,7 +24,7 @@ export function EventDetails() {
     {
       Icon: MapPin,
       title: "Location",
-      description: "Butwal, Lumbini Province, Nepal",
+      description: "Police Training Centre, Butwal, Rupandehi",
     },
   ];
 
