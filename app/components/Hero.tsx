@@ -43,7 +43,7 @@ export function Hero() {
               href="#register"
               className="btn-primary inline-flex items-center bg-crimson text-white px-8 py-4 font-mono font-bold text-sm uppercase tracking-widest"
             >
-              Register Now ›
+              Registration Opening Soon ›
             </a>
             <a
               href="#tracks"

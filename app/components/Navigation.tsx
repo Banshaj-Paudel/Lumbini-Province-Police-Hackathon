@@ -63,7 +63,7 @@ export function Navigation() {
               href="#register"
               className="hidden md:inline-flex btn-primary font-mono font-bold text-sm uppercase tracking-widest px-6 py-3 bg-crimson text-white"
             >
-              REGISTER NOW
+              REGISTRATION OPENING SOON
             </a>
             <button
               className="lg:hidden p-2 text-foreground"
@@ -104,7 +104,7 @@ export function Navigation() {
             onClick={() => setMobileOpen(false)}
             className="mt-auto w-full text-center bg-crimson text-white font-mono font-bold text-sm uppercase tracking-widest py-4"
           >
-            REGISTER NOW
+            REGISTRATION OPENING SOON
           </a>
         </div>
       )}
