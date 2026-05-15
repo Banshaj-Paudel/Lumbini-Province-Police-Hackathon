@@ -60,6 +60,8 @@ export function Navigation() {
 
           <div className="flex items-center gap-3">
             <span
+              role="button"
+              aria-disabled="true"
               className="hidden md:inline-flex btn-primary font-mono font-bold text-sm uppercase tracking-widest px-6 py-3 bg-crimson text-white cursor-not-allowed"
             >
               REGISTRATION OPENING SOON
@@ -99,6 +101,8 @@ export function Navigation() {
             ))}
           </div>
           <span
+            role="button"
+            aria-disabled="true"
             className="mt-auto w-full text-center bg-crimson text-white font-mono font-bold text-sm uppercase tracking-widest py-4 cursor-not-allowed"
           >
             REGISTRATION OPENING SOON
