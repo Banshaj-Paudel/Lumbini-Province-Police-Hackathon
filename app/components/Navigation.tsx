@@ -62,6 +62,7 @@ export function Navigation() {
             <span
               role="button"
               aria-disabled="true"
+              tabIndex={-1}
               className="hidden md:inline-flex btn-primary font-mono font-bold text-sm uppercase tracking-widest px-6 py-3 bg-crimson text-white cursor-not-allowed"
             >
               REGISTRATION OPENING SOON
@@ -103,6 +104,7 @@ export function Navigation() {
           <span
             role="button"
             aria-disabled="true"
+            tabIndex={-1}
             className="mt-auto w-full text-center bg-crimson text-white font-mono font-bold text-sm uppercase tracking-widest py-4 cursor-not-allowed"
           >
             REGISTRATION OPENING SOON

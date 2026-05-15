@@ -65,6 +65,7 @@ export default function NotFound() {
             <span
               role="button"
               aria-disabled="true"
+              tabIndex={-1}
               className="inline-flex items-center justify-center gap-3 border-2 border-crimson text-crimson font-mono font-bold text-sm uppercase tracking-widest px-8 py-4 cursor-not-allowed"
             >
               <span>REGISTRATION OPENING SOON</span>
