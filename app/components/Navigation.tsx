@@ -30,7 +30,7 @@ export function Navigation() {
               height={48}
             />
             <div className="flex flex-col leading-tight">
-              <span className="font-mono font-bold text-left text-sm tracking-widest uppercase text-[#004163]">
+              <span className="font-mono font-bold text-left text-xs sm:text-sm tracking-widest uppercase text-[#004163]">
                 LUMBINI PROVINCE POLICE
               </span>
               <span
@@ -41,7 +41,7 @@ export function Navigation() {
                   letterSpacing: "0.2em",
                 }}
               >
-                 HACKATHON 2083
+                HACKATHON 2083
               </span>
             </div>
           </button>
@@ -78,7 +78,7 @@ export function Navigation() {
       </nav>
 
       {mobileOpen && (
-        <div className="fixed inset-0 z-[60] bg-white flex flex-col p-8">
+        <div className="fixed inset-0 z-60 bg-white flex flex-col p-8">
           <div className="flex justify-end">
             <button
               onClick={() => setMobileOpen(false)}
