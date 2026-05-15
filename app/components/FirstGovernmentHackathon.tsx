@@ -59,8 +59,22 @@ export function FirstGovernmentHackathon() {
               stroke="white"
               strokeWidth="0.6"
             />
-            <line x1="40" y1="0" x2="40" y2="80" stroke="white" strokeWidth="0.5" />
-            <line x1="0" y1="40" x2="80" y2="40" stroke="white" strokeWidth="0.5" />
+            <line
+              x1="40"
+              y1="0"
+              x2="40"
+              y2="80"
+              stroke="white"
+              strokeWidth="0.5"
+            />
+            <line
+              x1="0"
+              y1="40"
+              x2="80"
+              y2="40"
+              stroke="white"
+              strokeWidth="0.5"
+            />
             <polygon points="40,4 44,12 36,12" fill="white" />
             <polygon points="40,76 44,68 36,68" fill="white" />
             <polygon points="4,40 12,44 12,36" fill="white" />
@@ -87,7 +101,7 @@ export function FirstGovernmentHackathon() {
           </div>
           <p className="font-mono text-sm text-white/40 max-w-sm">
             Nepal Police proudly leads the nation as the first governmental body
-            to organize a hackathon — a defining moment for public sector
+            to organize a hackathon - a defining moment for public sector
             innovation in Nepal.
           </p>
         </div>
