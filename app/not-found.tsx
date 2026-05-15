@@ -62,15 +62,14 @@ export default function NotFound() {
               <span>BACK TO HOME</span>
               <ArrowRight size={20} className="group-hover:translate-x-1 transition-transform" />
             </Link>
-            <span
-              role="button"
-              aria-disabled="true"
-              tabIndex={-1}
-              className="inline-flex items-center justify-center gap-3 border-2 border-crimson text-crimson font-mono font-bold text-sm uppercase tracking-widest px-8 py-4 cursor-not-allowed"
+            <button
+              type="button"
+              disabled
+              className="group inline-flex items-center justify-center gap-3 border-2 border-crimson text-crimson font-mono font-bold text-sm uppercase tracking-widest px-8 py-4 cursor-not-allowed"
             >
               <span>REGISTRATION OPENING SOON</span>
               <ArrowRight size={20} />
-            </span>
+            </button>
           </div>
         </div>
       </div>
