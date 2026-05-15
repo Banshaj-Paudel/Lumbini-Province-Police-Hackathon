@@ -59,12 +59,13 @@ export function Navigation() {
           </div>
 
           <div className="flex items-center gap-3">
-            <a
-              href="#register"
-              className="hidden md:inline-flex btn-primary font-mono font-bold text-sm uppercase tracking-widest px-6 py-3 bg-crimson text-white"
+            <button
+              type="button"
+              disabled
+              className="hidden md:inline-flex btn-primary font-mono font-bold text-sm uppercase tracking-widest px-6 py-3 bg-crimson text-white cursor-not-allowed"
             >
-              REGISTER NOW
-            </a>
+              REGISTRATION OPENING SOON
+            </button>
             <button
               className="lg:hidden p-2 text-foreground"
               onClick={() => setMobileOpen(true)}
@@ -99,13 +100,13 @@ export function Navigation() {
               </a>
             ))}
           </div>
-          <a
-            href="#register"
-            onClick={() => setMobileOpen(false)}
-            className="mt-auto w-full text-center bg-crimson text-white font-mono font-bold text-sm uppercase tracking-widest py-4"
+          <button
+            type="button"
+            disabled
+            className="mt-auto w-full text-center bg-crimson text-white font-mono font-bold text-sm uppercase tracking-widest py-4 cursor-not-allowed"
           >
-            REGISTER NOW
-          </a>
+            REGISTRATION OPENING SOON
+          </button>
         </div>
       )}
     </>
