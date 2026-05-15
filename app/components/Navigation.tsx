@@ -103,7 +103,6 @@ export function Navigation() {
           <button
             type="button"
             disabled
-            onClick={() => setMobileOpen(false)}
             className="mt-auto w-full text-center bg-crimson text-white font-mono font-bold text-sm uppercase tracking-widest py-4 cursor-not-allowed"
           >
             REGISTRATION OPENING SOON
