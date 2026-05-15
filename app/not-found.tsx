@@ -63,7 +63,6 @@ export default function NotFound() {
               <ArrowRight size={20} className="group-hover:translate-x-1 transition-transform" />
             </Link>
             <span
-              aria-disabled={true}
               className="inline-flex items-center justify-center gap-3 border-2 border-crimson text-crimson font-mono font-bold text-sm uppercase tracking-widest px-8 py-4 cursor-not-allowed"
             >
               <span>REGISTRATION OPENING SOON</span>
