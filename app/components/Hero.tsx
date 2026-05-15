@@ -120,7 +120,7 @@ export function Hero() {
                   Police Training Centre, Butwal, Rupandehi
                 </dt>
                 <dd className="font-mono text-xs text-white/50 mt-1">
-                  Police Training Centre, Butwal, Rupandehi
+                  Butwal, Rupandehi, Lumbini, Nepal
                 </dd>
               </div>
             </div>
