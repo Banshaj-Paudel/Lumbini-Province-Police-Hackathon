@@ -5,17 +5,17 @@ export const tickerItems = [
   "JESTHA 30-31",
   "BUTWAL, LUMBINI PROVINCE",
   "36 HOURS",
-  "NPR 1,00,000 IN PRIZES",
+  "NPR 1,00,000 PRIZE POOL",
   "HACKATHON 2083",
   "JESTHA 30-31",
   "BUTWAL, LUMBINI PROVINCE",
   "36 HOURS",
-  "NPR 1,00,000 IN PRIZES",
+  "NPR 1,00,000 PRIZE POOL",
   "HACKATHON 2083",
   "JESTHA 30-31",
   "BUTWAL, LUMBINI PROVINCE",
   "36 HOURS",
-  "NPR 1,00,000 IN PRIZES",
+  "NPR 1,00,000 PRIZE POOL",
 ];
 
 export const navLinks = [
@@ -41,6 +41,6 @@ export const whyJoinData = [
   {
     Icon: Award,
     title: "PRIZE POOL",
-    desc: "NPR 1,00,000 in prizes across all tracks, plus official government recognition certificates.",
+    desc: "NPR 1,00,000 PRIZE POOL across all tracks, plus official government recognition certificates.",
   },
 ];
