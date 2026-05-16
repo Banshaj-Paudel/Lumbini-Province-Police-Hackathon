@@ -10,7 +10,7 @@ export function TopStatusBar() {
           </span>
         </div>
         <div className="hidden sm:flex items-center gap-5 mono text-[11px] text-white/45">
-          <span>May 30 — 31, 2026</span>
+          <span>May 30 - 31, 2026</span>
           <span className="h-3 w-px bg-white/15" />
           <span>Police Training Centre, Butwal, Rupandehi</span>
         </div>

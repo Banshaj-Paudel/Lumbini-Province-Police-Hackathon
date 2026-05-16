@@ -8,7 +8,7 @@ const milestones = [
   {
     Icon: Landmark,
     title: "GOVERNMENT-LED",
-    desc: "Officially organized by Nepal Police — the entry of a national institution into the technology and developer ecosystem.",
+    desc: "Officially organized by Nepal Police - the entry of a national institution into the technology and developer ecosystem.",
   },
   {
     Icon: Flag,

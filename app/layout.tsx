@@ -18,7 +18,7 @@ const jetbrains = JetBrains_Mono({
 export const metadata: Metadata = {
   title: "Lumbini Province Police Hackathon 2083 | Jestha 30-31, 2083 |",
   description:
-    "Join Nepal's premier police hackathon at Police Training Centre, Butwal, Rupandehi. 36-hour innovation sprint for developers. NPR 1,00,000 prize pool. Free registration. Build AI, IoT, and citizen-police tech solutions.",
+    "The inaugural hackathon ever organized by Nepal Police, and the first by any governmental body in the country. Join the Lumbini Province Police Hackathon 2083 at Butwal, Rupandehi - a 36-hour innovation sprint building Cyber Forensic AI, IoT Public Safety, and Citizen-Police Tech solutions. NPR 1,00,000 prize pool. Free registration for developers across Nepal.",
   keywords: [
     "Lumbini Province Police Hackathon 2083",
     "Nepal Police Hackathon",
@@ -34,14 +34,15 @@ export const metadata: Metadata = {
   authors: [{ name: "Lumbini Province Police" }],
   creator: "Lumbini Province Police",
   publisher: "Lumbini Province Police",
-  robots: "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  robots:
+    "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
   openGraph: {
     type: "website",
     locale: "en_US",
     url: "https://hackathon.nepalpolice.gov.np",
     title: "Lumbini Province Police Hackathon 2083",
     description:
-      "Join Nepal's premier police hackathon at Police Training Centre, Butwal, Rupandehi. 36-hour innovation sprint for developers. Build solutions for public safety, IoT, and citizen engagement. NPR 1,00,000 prize pool.",
+      "Nepal Police proudly leads the nation as the first governmental body to organize a hackathon — a defining moment for public sector innovation in Nepal. A 36-hour sprint at Police Training Centre, Butwal, building Cyber Forensic AI, IoT Public Safety, and Citizen-Police Tech solutions. NPR 1,00,000 prize pool. Free registration.",
     siteName: "Lumbini Province Police Hackathon",
     images: [
       {
@@ -56,7 +57,8 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Lumbini Province Police Hackathon 2083",
-    description: "Join Nepal's premier police hackathon. Free registration. 36-hour innovation sprint.",
+    description:
+      "The first hackathon ever by Nepal Police - and the first by any governmental body in the country. 36-hour sprint at Butwal. Free registration. NPR 1,00,000 prize pool.",
     images: ["https://hackathon.nepalpolice.gov.np/og-image.png"],
   },
   alternates: {
@@ -85,7 +87,10 @@ export default function RootLayout({
     >
       <head>
         <SchemaMarkup />
-        <meta name="google-site-verification" content="verification-code-here" />
+        <meta
+          name="google-site-verification"
+          content="verification-code-here"
+        />
         <meta name="msvalidate.01" content="verification-code-here" />
         <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
       </head>

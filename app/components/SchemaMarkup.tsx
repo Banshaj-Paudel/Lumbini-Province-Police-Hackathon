@@ -4,7 +4,7 @@ export function SchemaMarkup() {
     "@type": "Event",
     name: "Lumbini Province Police Hackathon 2083",
     description:
-      "Join Nepal's premier police hackathon at Police Training Centre, Butwal, Rupandehi. 36-hour innovation sprint for developers building solutions for public safety, IoT, and citizen engagement.",
+      "The inaugural hackathon ever organized by Nepal Police, and the first by any governmental body in the country. The Lumbini Province Police Hackathon 2083 is a 36-hour innovation sprint at Police Training Centre, Butwal, Rupandehi, where developers build Cyber Forensic AI, IoT Public Safety, and Citizen-Police Tech solutions.",
     startDate: "2083-06-30",
     endDate: "2083-07-01",
     eventStatus: "https://schema.org/EventScheduled",
@@ -36,10 +36,7 @@ export function SchemaMarkup() {
       name: "Lumbini Province Police",
       url: "https://lumbini.nepalpolice.gov.np",
       logo: "https://hackathon.nepalpolice.gov.np/logo.png",
-      sameAs: [
-        "https://www.facebook.com/lumbinipolice",
-        "https://twitter.com/lumbinipolice",
-      ],
+      sameAs: ["https://www.facebook.com/lppodang"],
     },
     awardWon: {
       "@type": "MonetaryAmount",
@@ -52,10 +49,11 @@ export function SchemaMarkup() {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
     name: "Lumbini Province Police",
-    description: "Law enforcement agency organizing digital innovation hackathon",
+    description:
+      "Lumbini Province Police - proudly leading the nation as the first governmental body to organize a hackathon, a defining moment for public sector innovation in Nepal. Advancing digital public safety and citizen-police innovation across Lumbini Province.",
     url: "https://lumbini.nepalpolice.gov.np",
     telephone: "+977-71-1234567",
-    email: "hackathon@lumbini.nepalpolice.gov.np",
+    email: "ujjwalkhadka@nepalpolice.gov.np",
     address: {
       "@type": "PostalAddress",
       addressLocality: "Butwal",
@@ -63,10 +61,7 @@ export function SchemaMarkup() {
       postalCode: "32900",
       addressCountry: "NP",
     },
-    sameAs: [
-      "https://www.facebook.com/lumbinipolice",
-      "https://twitter.com/lumbinipolice",
-    ],
+    sameAs: ["https://www.facebook.com/lppodang"],
     areaServed: "Lumbini Province",
   };
 
