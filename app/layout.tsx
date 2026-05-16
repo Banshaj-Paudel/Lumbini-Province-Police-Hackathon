@@ -42,7 +42,7 @@ export const metadata: Metadata = {
     url: "https://hackathon.nepalpolice.gov.np",
     title: "Lumbini Province Police Hackathon 2083",
     description:
-      "Nepal Police proudly leads the nation as the first governmental body to organize a hackathon — a defining moment for public sector innovation in Nepal. A 36-hour sprint at Police Training Centre, Butwal, building Cyber Forensic AI, IoT Public Safety, and Citizen-Police Tech solutions. NPR 1,00,000 prize pool. Free registration.",
+      "Nepal Police proudly leads the nation as the first governmental body to organize a hackathon - a defining moment for public sector innovation in Nepal. A 36-hour sprint at Police Training Centre, Butwal, building Cyber Forensic AI, IoT Public Safety, and Citizen-Police Tech solutions. NPR 1,00,000 prize pool. Free registration.",
     siteName: "Lumbini Province Police Hackathon",
     images: [
       {
