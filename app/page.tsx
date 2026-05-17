@@ -6,6 +6,7 @@ import { EventDetails } from "./components/EventDetails";
 import { FirstGovernmentHackathon } from "./components/FirstGovernmentHackathon";
 import { WhyJoin } from "./components/WhyJoin";
 import { Tracks } from "./components/Tracks";
+import { Provisions } from "./components/Provisions";
 import { HimalayanDivider } from "./components/HimalayanDivider";
 import { Timeline } from "./components/Timeline";
 import { Judges } from "./components/Judges";
@@ -27,6 +28,7 @@ export default function Home() {
       <EventDetails />
       <FirstGovernmentHackathon />
       <Tracks />
+      <Provisions />
 
       <HimalayanDivider />
       <WhyJoin />
