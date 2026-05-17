@@ -22,7 +22,7 @@ export function FAQ() {
     {
       question: "Do I need to have a team before registering?",
       answer:
-        "You can register as an individual or with a pre-formed team. We'll provide opportunities to network and form teams if you're registering solo.",
+        "Yes. You must register with a pre-formed team of 3 to 4 members. Individual registrations are not accepted.",
     },
     {
       question: "What should I bring to the hackathon?",

@@ -55,7 +55,6 @@ export const seoKeywords = {
 export const faqKeywords = {
   "Team Formation": [
     "How many members per team?",
-    "Can I participate solo?",
     "Team size requirements hackathon",
   ],
   Registration: [

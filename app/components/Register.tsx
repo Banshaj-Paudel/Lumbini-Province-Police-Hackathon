@@ -47,7 +47,7 @@ export function Register() {
           transition={{ duration: 0.5, delay: 0.16 }}
           className="font-mono text-base text-white/80"
         >
-          Join us for a 36-hour innovation sprint on Jestha 30–31, 2083. Open to individuals and teams of up to 4 members.
+          Join us for a 36-hour innovation sprint on Jestha 30–31, 2083. Open to teams of 3 to 4 members.
         </motion.p>
       </div>
     </section>
