@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import { Inter, JetBrains_Mono } from "next/font/google";
 import { SchemaMarkup } from "./components/SchemaMarkup";
+import { ClarityAnalytics } from "./components/ClarityAnalytics";
 import "./globals.css";
 
 const inter = Inter({
@@ -94,7 +95,10 @@ export default function RootLayout({
         <meta name="msvalidate.01" content="verification-code-here" />
         <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
       </head>
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className="min-h-full flex flex-col">
+        <ClarityAnalytics />
+        {children}
+      </body>
     </html>
   );
 }
