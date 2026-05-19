@@ -108,7 +108,8 @@ export default async function TrackPage({
             </h2>
             <p className="font-mono text-sm text-foreground/60 leading-relaxed mt-1">
               Each sub-theme below is a problem space. Pick one, narrow it, and
-              build a solution that ships.
+              build a solution that ships. The build ideas shown are only
+              directions bring your own original, ethical idea.
             </p>
           </div>
 
@@ -140,31 +141,22 @@ export default async function TrackPage({
                   {s.desc}
                 </p>
 
-                <div>
-                  <div className="flex items-center gap-2 mb-4">
-                    <Lightbulb size={14} className={a.icon} />
+                <div className="bg-soft p-5 md:p-6 max-w-2xl flex items-start gap-4">
+                  <Lightbulb
+                    size={24}
+                    className={`${a.icon} mt-0.5 shrink-0`}
+                    aria-hidden
+                  />
+                  <div className="flex flex-col gap-1.5 min-w-0">
                     <span
                       className={`font-mono text-[10px] font-bold tracking-widest uppercase ${a.label}`}
                     >
-                      EXAMPLE IDEAS
+                      BUILD IDEA · DIRECTION ONLY
                     </span>
+                    <p className="font-mono text-sm md:text-[15px] text-foreground/80 leading-relaxed">
+                      {s.example}
+                    </p>
                   </div>
-                  <ul className="grid grid-cols-1 md:grid-cols-3 gap-3 list-none p-0 m-0">
-                    {s.examples.map((ex) => (
-                      <li
-                        key={ex}
-                        className={`relative border border-border ${a.tint} p-4 flex items-start gap-3 hover:shadow-md transition-shadow`}
-                      >
-                        <span
-                          className={`mt-[7px] inline-block w-1.5 h-1.5 ${a.dot} shrink-0`}
-                          aria-hidden
-                        />
-                        <span className="font-mono text-sm text-foreground/80 leading-relaxed">
-                          {ex}
-                        </span>
-                      </li>
-                    ))}
-                  </ul>
                 </div>
               </article>
             ))}

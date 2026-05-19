@@ -30,7 +30,7 @@ export function Tracks() {
               >
                 <Link
                   href={`/tracks/${t.slug}`}
-                  className={`group relative block h-full border border-border bg-white hover:shadow-xl transition-all ${a.ring}`}
+                  className={`group relative block h-full border border-border bg-white transition-colors ${a.ring}`}
                 >
                   <span
                     className={`absolute top-0 left-0 h-full w-1 ${a.bar}`}
