@@ -50,7 +50,7 @@ export function Navigation() {
             {navLinks.map((l) => (
               <a
                 key={l}
-                href={`#${l.toLowerCase()}`}
+                href={`/#${l.toLowerCase()}`}
                 className="font-mono font-bold text-xs uppercase tracking-wider text-foreground/65 hover:text-crimson transition-colors"
               >
                 {l}
@@ -92,7 +92,7 @@ export function Navigation() {
             {navLinks.map((l) => (
               <a
                 key={l}
-                href={`#${l.toLowerCase()}`}
+                href={`/#${l.toLowerCase()}`}
                 onClick={() => setMobileOpen(false)}
                 className="font-sans font-black text-3xl uppercase text-foreground"
               >

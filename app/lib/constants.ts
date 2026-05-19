@@ -24,7 +24,6 @@ export const navLinks = [
   "TIMELINE",
   "JUDGES",
   "MENTORS",
-  "TEAM",
 ];
 
 export const whyJoinData = [

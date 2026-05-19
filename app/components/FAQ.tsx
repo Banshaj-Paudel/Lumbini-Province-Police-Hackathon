@@ -44,10 +44,15 @@ export function FAQ() {
       answer:
         "Judging criteria will be announced closer to the event date."
     },
+    {
+      question: "Can we build IoT or hardware projects?",
+      answer:
+        "Yes, IoT and hardware projects are welcome. However, teams are responsible for bringing their own components, sensors, microcontrollers, and any other required hardware materials. The venue will not provide IoT-specific equipment.",
+    },
   ];
 
   return (
-    <section className="w-full bg-soft py-24 md:py-28">
+    <section className="w-full bg-white py-24 md:py-28">
       <div className="mx-auto max-w-4xl px-6 md:px-10">
         <SectionHeading label="COMMON QUESTIONS" title="FREQUENTLY ASKED" />
 

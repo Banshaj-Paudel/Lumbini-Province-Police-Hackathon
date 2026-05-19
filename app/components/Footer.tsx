@@ -40,7 +40,7 @@ export function Footer() {
               {navLinks.map((l) => (
                 <li key={l}>
                   <a
-                    href={`#${l.toLowerCase()}`}
+                    href={`/#${l.toLowerCase()}`}
                     className="font-mono text-xs uppercase tracking-wider text-white/50 hover:text-white transition-colors"
                   >
                     {l}

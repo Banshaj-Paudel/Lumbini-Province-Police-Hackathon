@@ -7,12 +7,12 @@ import { FirstGovernmentHackathon } from "./components/FirstGovernmentHackathon"
 import { WhyJoin } from "./components/WhyJoin";
 import { Tracks } from "./components/Tracks";
 import { Provisions } from "./components/Provisions";
+import { Prizes } from "./components/Prizes";
 import { HimalayanDivider } from "./components/HimalayanDivider";
 import { Timeline } from "./components/Timeline";
 import { Judges } from "./components/Judges";
 import { Mentors } from "./components/Mentors";
 import { FAQ } from "./components/FAQ";
-import { OrganizingTeam } from "./components/OrganizingTeam";
 import { Register } from "./components/Register";
 import { ContactPeople } from "./components/ContactPeople";
 import { Footer } from "./components/Footer";
@@ -29,13 +29,13 @@ export default function Home() {
       <FirstGovernmentHackathon />
       <Tracks />
       <Provisions />
+      <Prizes />
 
       <HimalayanDivider />
       <WhyJoin />
       <Timeline />
       <Judges />
       <Mentors />
-      <OrganizingTeam />
       <FAQ />
       <Register />
       <ContactPeople />
