@@ -38,7 +38,7 @@ export function Register() {
           transition={{ duration: 0.5, delay: 0.08 }}
           className="font-sans font-black text-5xl md:text-7xl tracking-tighter text-white"
         >
-          Registration Opening Soon
+          Register Now
         </motion.h2>
         <motion.p
           initial={{ opacity: 0, y: 20 }}

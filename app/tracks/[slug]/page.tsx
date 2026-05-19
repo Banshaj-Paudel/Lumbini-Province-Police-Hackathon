@@ -177,39 +177,52 @@ export default async function TrackPage({
 
       <section className="w-full bg-indigo py-16 md:py-20">
         <div className="mx-auto max-w-5xl px-6 md:px-10">
-          <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-8">
+          <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-10">
             <div className="flex flex-col gap-3 max-w-xl">
               <span className="font-mono text-xs font-bold tracking-widest uppercase text-gold">
                 READY TO BUILD?
               </span>
               <h3 className="font-sans font-black text-3xl md:text-4xl uppercase text-white tracking-tighter leading-tight">
-                EXPLORE THE OTHER TRACK
+                JOIN THE HACKATHON
               </h3>
               <p className="font-mono text-sm text-white/60 leading-relaxed">
-                See what your team could build across all three focus areas of
-                the hackathon.
+                Form a team of 3–4, pick a sub-theme, and ship something that
+                serves Nepal Police and the citizens of Lumbini Province.
               </p>
             </div>
 
-            <Link
-              href={`/tracks/${next.slug}`}
-              className="inline-flex items-center justify-between gap-5 bg-white text-foreground px-6 py-5 hover:bg-gold transition-colors group max-w-md"
-            >
-              <div className="flex flex-col gap-1 text-left">
-                <span
-                  className={`font-mono text-[10px] font-bold tracking-widest uppercase ${accentMap[next.accent].label}`}
-                >
-                  NEXT · TRACK {next.number}
+            <div className="flex flex-col gap-3 w-full md:w-auto md:min-w-[20rem]">
+              <Link
+                href="/#register"
+                className="inline-flex items-center justify-between gap-5 bg-crimson text-white px-6 py-5 hover:bg-white hover:text-crimson transition-colors group"
+              >
+                <span className="font-mono font-bold text-sm uppercase tracking-widest">
+                  REGISTER NOW
                 </span>
-                <span className="font-sans font-black text-base uppercase tracking-tight leading-tight">
-                  {next.title}
-                </span>
-              </div>
-              <ArrowRight
-                size={20}
-                className="shrink-0 transition-transform group-hover:translate-x-1"
-              />
-            </Link>
+                <ArrowRight
+                  size={20}
+                  className="shrink-0 transition-transform group-hover:translate-x-1"
+                />
+              </Link>
+
+              <Link
+                href={`/tracks/${next.slug}`}
+                className="inline-flex items-center justify-between gap-5 border border-white/20 text-white px-6 py-4 hover:bg-white/5 transition-colors group"
+              >
+                <div className="flex flex-col gap-0.5 text-left min-w-0">
+                  <span className="font-mono text-[10px] font-bold tracking-widest uppercase text-gold">
+                    NEXT · TRACK {next.number}
+                  </span>
+                  <span className="font-mono text-xs font-bold tracking-wider uppercase truncate">
+                    {next.title}
+                  </span>
+                </div>
+                <ArrowRight
+                  size={16}
+                  className="shrink-0 transition-transform group-hover:translate-x-1"
+                />
+              </Link>
+            </div>
           </div>
         </div>
       </section>
