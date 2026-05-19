@@ -78,7 +78,7 @@ export function Tracks() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 0.4 }}
-          className="mt-10 border-l-2 border-gold pl-6 py-2 max-w-3xl"
+          className="mt-10 border-l-2 border-gold bg-gold/5 px-6 py-5 w-full"
         >
           <span className="font-mono text-[10px] font-bold tracking-widest uppercase text-gold block mb-2">
             NOTE

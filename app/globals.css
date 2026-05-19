@@ -32,6 +32,11 @@
   border-radius: 0 !important;
 }
 
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 4rem;
+}
+
 html,
 body {
   background: var(--background);

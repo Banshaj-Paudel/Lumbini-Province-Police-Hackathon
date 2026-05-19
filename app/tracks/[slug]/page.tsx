@@ -44,13 +44,14 @@ export default async function TrackPage({
 
       <section className="relative w-full bg-white py-16 md:py-24 border-b border-border overflow-hidden">
         <div className="relative mx-auto max-w-5xl px-6 md:px-10">
-          <Link
+          {/* eslint-disable-next-line @next/next/no-html-link-for-pages */}
+          <a
             href="/#tracks"
             className="inline-flex items-center gap-2 font-mono text-xs font-bold tracking-widest uppercase text-foreground/60 hover:text-crimson transition-colors mb-10"
           >
             <ArrowLeft size={14} />
             ALL TRACKS
-          </Link>
+          </a>
 
           <div className="flex items-stretch gap-5">
             <span className={`w-1 ${a.bar}`} aria-hidden />
@@ -162,7 +163,7 @@ export default async function TrackPage({
             ))}
           </div>
 
-          <div className="mt-12 border-l-2 border-gold pl-6 py-2 max-w-3xl">
+          <div className="mt-12 border-l-2 border-gold bg-gold/5 px-6 py-5 w-full">
             <span className="font-mono text-[10px] font-bold tracking-widest uppercase text-gold block mb-2">
               NOTE
             </span>
@@ -192,7 +193,8 @@ export default async function TrackPage({
             </div>
 
             <div className="flex flex-col gap-3 w-full md:w-auto md:min-w-[20rem]">
-              <Link
+              {/* eslint-disable-next-line @next/next/no-html-link-for-pages */}
+              <a
                 href="/#register"
                 className="inline-flex items-center justify-between gap-5 bg-crimson text-white px-6 py-5 hover:bg-white hover:text-crimson transition-colors group"
               >
@@ -203,7 +205,7 @@ export default async function TrackPage({
                   size={20}
                   className="shrink-0 transition-transform group-hover:translate-x-1"
                 />
-              </Link>
+              </a>
 
               <Link
                 href={`/tracks/${next.slug}`}

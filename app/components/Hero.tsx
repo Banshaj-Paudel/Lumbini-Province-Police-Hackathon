@@ -44,15 +44,16 @@ export function Hero() {
             Jestha 30-31, 2083 | Police Training Centre, Butwal, Rupandehi
           </p>
           <div className="flex flex-wrap gap-4 mt-2">
-            <button
-              type="button"
-              disabled
-              className="btn-primary inline-flex items-center bg-crimson text-white px-8 py-4 font-mono font-bold text-sm uppercase tracking-widest cursor-not-allowed"
-            >
-              Registration Opening Soon
-            </button>
+            {/* eslint-disable-next-line @next/next/no-html-link-for-pages */}
             <a
-              href="#tracks"
+              href="/#register"
+              className="btn-primary inline-flex items-center bg-crimson text-white px-8 py-4 font-mono font-bold text-sm uppercase tracking-widest"
+            >
+              Register Now
+            </a>
+            {/* eslint-disable-next-line @next/next/no-html-link-for-pages */}
+            <a
+              href="/#tracks"
               className="inline-flex items-center border-2 border-white/30 text-white/80 px-8 py-4 font-mono font-bold text-sm uppercase tracking-widest hover:border-white transition-colors"
             >
               View Tracks

@@ -62,14 +62,14 @@ export default function NotFound() {
               <span>BACK TO HOME</span>
               <ArrowRight size={20} className="group-hover:translate-x-1 transition-transform" />
             </Link>
-            <button
-              type="button"
-              disabled
-              className="group inline-flex items-center justify-center gap-3 border-2 border-crimson text-crimson font-mono font-bold text-sm uppercase tracking-widest px-8 py-4 cursor-not-allowed"
+            {/* eslint-disable-next-line @next/next/no-html-link-for-pages */}
+            <a
+              href="/#register"
+              className="group inline-flex items-center justify-center gap-3 border-2 border-crimson text-crimson font-mono font-bold text-sm uppercase tracking-widest px-8 py-4 hover:bg-crimson hover:text-white transition-colors"
             >
-              <span>REGISTRATION OPENING SOON</span>
-              <ArrowRight size={20} />
-            </button>
+              <span>REGISTER NOW</span>
+              <ArrowRight size={20} className="group-hover:translate-x-1 transition-transform" />
+            </a>
           </div>
         </div>
       </div>
