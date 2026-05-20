@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { Award, Target, MapPin } from "lucide-react";
+import { REGISTRATION_URL } from "../lib/constants";
 
 export function Hero() {
   return (
@@ -44,9 +45,10 @@ export function Hero() {
             Jestha 30-31, 2083 | Police Training Centre, Butwal, Rupandehi
           </p>
           <div className="flex flex-wrap gap-4 mt-2">
-            {/* eslint-disable-next-line @next/next/no-html-link-for-pages */}
             <a
-              href="/#register"
+              href={REGISTRATION_URL}
+              target="_blank"
+              rel="noopener noreferrer"
               className="btn-primary inline-flex items-center bg-crimson text-white px-8 py-4 font-mono font-bold text-sm uppercase tracking-widest"
             >
               Register Now

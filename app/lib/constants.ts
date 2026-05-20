@@ -26,6 +26,9 @@ export const navLinks = [
   "MENTORS",
 ];
 
+export const REGISTRATION_URL =
+  "https://forms.cloud.microsoft/pages/responsepage.aspx?id=Gb27KmR-_ESpiPdjK6Yp_CIbeRW4vHVHjavU5S5yjM1UMTkyWkRHR1FaNjQxMDkwTzdOOENIOVpYWS4u&route=shorturl";
+
 export const whyJoinData = [
   {
     Icon: Shield,

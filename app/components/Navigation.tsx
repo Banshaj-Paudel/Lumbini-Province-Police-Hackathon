@@ -2,9 +2,8 @@
 
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
-import { navLinks } from "../lib/constants";
+import { navLinks, REGISTRATION_URL } from "../lib/constants";
 import Image from "next/image";
-import Link from "next/link";
 
 export function Navigation() {
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -60,12 +59,14 @@ export function Navigation() {
           </div>
 
           <div className="flex items-center gap-3">
-            <Link
-              href="/#register"
+            <a
+              href={REGISTRATION_URL}
+              target="_blank"
+              rel="noopener noreferrer"
               className="hidden md:inline-flex btn-primary font-mono font-bold text-sm uppercase tracking-widest px-6 py-3 bg-crimson text-white"
             >
               REGISTER NOW
-            </Link>
+            </a>
             <button
               className="lg:hidden p-2 text-foreground"
               onClick={() => setMobileOpen(true)}
@@ -100,13 +101,15 @@ export function Navigation() {
               </a>
             ))}
           </div>
-          <Link
-            href="/#register"
+          <a
+            href={REGISTRATION_URL}
+            target="_blank"
+            rel="noopener noreferrer"
             onClick={() => setMobileOpen(false)}
             className="mt-auto w-full text-center bg-crimson text-white font-mono font-bold text-sm uppercase tracking-widest py-4"
           >
             REGISTER NOW
-          </Link>
+          </a>
         </div>
       )}
     </>

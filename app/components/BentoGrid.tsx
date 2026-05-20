@@ -69,7 +69,7 @@ export function BentoGrid() {
             ORGANIZED BY
           </p>
           <p className="mt-4 font-sans font-black text-3xl md:text-4xl uppercase tracking-tight text-foreground">
-            LUMBINI PROVINCE POLICE
+            LUMBINI PROVINCE POLICE OFFICE
           </p>
         </motion.article>
       </ul>
