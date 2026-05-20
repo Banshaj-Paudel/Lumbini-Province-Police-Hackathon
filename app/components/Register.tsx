@@ -49,6 +49,18 @@ export function Register() {
         >
           Join us for a 36-hour innovation sprint on Jestha 30–31, 2083. Open to teams of 3 to 4 members.
         </motion.p>
+        <motion.a
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5, delay: 0.24 }}
+          href="https://forms.cloud.microsoft/pages/responsepage.aspx?id=Gb27KmR-_ESpiPdjK6Yp_CIbeRW4vHVHjavU5S5yjM1UMTkyWkRHR1FaNjQxMDkwTzdOOENIOVpYWS4u&route=shorturl"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex items-center border-2 border-white bg-white text-crimson px-8 py-4 font-mono font-bold text-sm uppercase tracking-widest transition-all duration-300 ease-out hover:bg-crimson hover:text-white hover:-translate-y-0.5 mt-2"
+        >
+          Register Now
+        </motion.a>
       </div>
     </section>
   );
