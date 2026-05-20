@@ -13,8 +13,9 @@ export function Tracks() {
         <SectionHeading label="CHALLENGE TRACKS" title="HACKATHON TRACKS" />
 
         <p className="font-mono text-sm text-foreground/60 max-w-2xl -mt-4 mb-12 leading-relaxed">
-          Three focus areas where your build can directly support Nepal Police
-          operations and the communities it serves.
+          Three themes grounded in real data from Nepal Police reports. Every
+          problem statement is backed by numbers because understanding the
+          scale is the first step to solving it.
         </p>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4 items-stretch">
@@ -47,13 +48,20 @@ export function Tracks() {
                       </span>
                     </div>
 
-                    <h3 className="font-sans font-black text-xl md:text-2xl uppercase text-foreground tracking-tight leading-tight min-h-[3.5rem]">
+                    <h3 className="font-sans font-black text-xl md:text-2xl uppercase text-foreground tracking-tight leading-tight min-h-[4.5rem]">
                       {t.title}
                     </h3>
 
                     <p className="font-mono text-sm text-foreground/70 leading-relaxed">
-                      {t.short}
+                      {t.tagline}
                     </p>
+
+                    <span
+                      className={`font-mono text-[10px] font-bold tracking-widest uppercase border border-border bg-soft px-3 py-1.5 w-fit ${a.label}`}
+                    >
+                      {t.problems.length}{" "}
+                      {t.problems.length === 1 ? "PROBLEM" : "PROBLEMS"}
+                    </span>
 
                     <div className="mt-auto pt-5 border-t border-border flex items-center justify-between">
                       <span

@@ -1,4 +1,4 @@
-/** Himalayan ridge — transitions navy hero into the white content area */
+/** Himalayan ridge - transitions navy hero into the white content area */
 export function PeakDivider() {
   return (
     <div aria-hidden className="w-full -mb-px pointer-events-none select-none">

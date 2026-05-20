@@ -1,11 +1,11 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { ArrowLeft, ArrowRight, Lightbulb } from "lucide-react";
+import { ArrowLeft, ArrowRight, HelpCircle } from "lucide-react";
 import { Navigation } from "../../components/Navigation";
 import { Footer } from "../../components/Footer";
 import { DhakaZigzag } from "../../components/shared/DhakaZigzag";
-import { tracks, accentMap, getTrackBySlug } from "../../lib/tracks";
+import { tracks, accentMap, getTrackBySlug, sources } from "../../lib/tracks";
 
 export function generateStaticParams() {
   return tracks.map((t) => ({ slug: t.slug }));
@@ -37,11 +37,15 @@ export default async function TrackPage({
   const a = accentMap[track.accent];
   const currentIdx = tracks.findIndex((t) => t.slug === track.slug);
   const next = tracks[(currentIdx + 1) % tracks.length];
+  const problemCount = `${track.problems.length} ${
+    track.problems.length === 1 ? "PROBLEM" : "PROBLEMS"
+  }`;
 
   return (
     <div className="flex flex-col w-full min-h-screen">
       <Navigation />
 
+      {/* HERO */}
       <section className="relative w-full bg-white py-16 md:py-24 border-b border-border overflow-hidden">
         <div className="relative mx-auto max-w-5xl px-6 md:px-10">
           {/* eslint-disable-next-line @next/next/no-html-link-for-pages */}
@@ -63,40 +67,68 @@ export default async function TrackPage({
                 >
                   TRACK {track.number}
                 </span>
+                <span className="h-3 w-px bg-border" aria-hidden />
+                <span
+                  className={`font-mono text-xs font-bold tracking-widest uppercase ${a.label}`}
+                >
+                  {problemCount}
+                </span>
               </div>
 
               <h1 className="font-sans font-black text-4xl md:text-6xl uppercase text-foreground tracking-tighter leading-[0.95]">
                 {track.title}
               </h1>
 
+              <p className="font-mono text-sm md:text-base font-bold text-foreground/80 leading-relaxed">
+                {track.tagline}
+              </p>
+
               <div className="max-w-md">
                 <DhakaZigzag />
               </div>
 
-              <p className="font-mono text-base md:text-lg text-foreground/70 leading-relaxed max-w-3xl">
+              <p className="font-mono text-base md:text-lg text-foreground/60 leading-relaxed max-w-3xl">
                 {track.long}
               </p>
-
-              <div className="mt-4 flex flex-wrap items-center gap-3">
-                <span className="font-mono text-[10px] font-bold tracking-widest uppercase text-foreground/40">
-                  FOCUS AREAS
-                </span>
-                <span className="h-px flex-1 min-w-8 max-w-32 bg-border" />
-                {track.subThemes.map((s, i) => (
-                  <span
-                    key={s.title}
-                    className={`font-mono text-[10px] font-bold tracking-widest uppercase border border-border bg-white px-3 py-1.5 ${a.label}`}
-                  >
-                    {String(i + 1).padStart(2, "0")}
-                  </span>
-                ))}
-              </div>
             </div>
           </div>
         </div>
       </section>
 
-      <section className="w-full bg-soft py-16 md:py-24">
+      {/* THE SCALE OF THE PROBLEM */}
+      <section className="w-full bg-soft py-16 md:py-20 border-b border-border">
+        <div className="mx-auto max-w-5xl px-6 md:px-10">
+          <div className="flex items-center gap-4 mb-10">
+            <span
+              className={`font-mono text-xs font-bold tracking-widest uppercase ${a.label}`}
+            >
+              THE SCALE OF THE PROBLEM
+            </span>
+            <span className="h-px flex-1 bg-border" />
+          </div>
+
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+            {track.stats.map((s) => (
+              <div
+                key={s.value}
+                className="bg-white border border-border p-6 flex flex-col gap-3"
+              >
+                <span
+                  className={`font-sans font-black text-3xl md:text-4xl tracking-tighter leading-none ${a.label}`}
+                >
+                  {s.value}
+                </span>
+                <span className="font-mono text-xs text-foreground/60 leading-relaxed">
+                  {s.label}
+                </span>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* PROBLEM STATEMENTS */}
+      <section className="w-full bg-white py-16 md:py-24">
         <div className="mx-auto max-w-5xl px-6 md:px-10">
           <div className="flex flex-col gap-3 mb-12 max-w-2xl">
             <span
@@ -105,77 +137,136 @@ export default async function TrackPage({
               WHAT YOU CAN BUILD
             </span>
             <h2 className="font-sans font-black text-3xl md:text-4xl uppercase text-foreground tracking-tighter leading-tight">
-              SUB-THEMES & EXAMPLES
+              PROBLEM STATEMENTS
             </h2>
             <p className="font-mono text-sm text-foreground/60 leading-relaxed mt-1">
-              Each sub-theme below is a problem space. Pick one, narrow it, and
-              build a solution that ships. The build ideas shown are only
-              directions bring your own original, ethical idea.
+              Each problem below is a direction, not a blueprint. Pick one,
+              research what already exists, and build a solution that ships.
             </p>
           </div>
 
           <div className="flex flex-col gap-6">
-            {track.subThemes.map((s, i) => (
+            {track.problems.map((p) => (
               <article
-                key={s.title}
-                className="relative bg-white border border-border p-8 md:p-10 overflow-hidden"
+                key={p.number}
+                className="relative bg-soft border border-border p-8 md:p-10 overflow-hidden"
               >
                 <span
                   className={`absolute top-0 left-0 h-1 w-full ${a.bar}`}
                   aria-hidden
                 />
 
-                <div className="flex items-center gap-4 mb-5">
+                <div className="flex items-baseline gap-4 mb-6">
                   <span
                     className={`font-sans font-black text-3xl md:text-4xl tracking-tighter leading-none ${a.label}`}
                   >
-                    {String(i + 1).padStart(2, "0")}
+                    {p.number.padStart(2, "0")}
                   </span>
-                  <span className="h-px flex-1 bg-border" />
+                  <h3 className="font-sans font-black text-2xl md:text-3xl uppercase text-foreground tracking-tight leading-tight">
+                    {p.title}
+                  </h3>
                 </div>
 
-                <h3 className="font-sans font-black text-2xl md:text-3xl uppercase text-foreground tracking-tight leading-tight mb-4">
-                  {s.title}
-                </h3>
-
-                <p className="font-mono text-sm md:text-base text-foreground/70 leading-relaxed mb-8 max-w-3xl">
-                  {s.desc}
-                </p>
-
-                <div className="bg-soft p-5 md:p-6 max-w-2xl flex items-start gap-4">
-                  <Lightbulb
-                    size={24}
+                <div className="bg-white border border-border p-5 md:p-6 mb-8 flex items-start gap-4">
+                  <HelpCircle
+                    size={22}
                     className={`${a.icon} mt-0.5 shrink-0`}
                     aria-hidden
                   />
-                  <div className="flex flex-col gap-1.5 min-w-0">
-                    <span
-                      className={`font-mono text-[10px] font-bold tracking-widest uppercase ${a.label}`}
+                  <p className="font-mono text-sm md:text-[15px] text-foreground/80 leading-relaxed">
+                    {p.question}
+                  </p>
+                </div>
+
+                <span className="font-mono text-[10px] font-bold tracking-widest uppercase text-foreground/40 block mb-5">
+                  THE NUMBERS BEHIND IT
+                </span>
+
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  {p.points.map((point) => (
+                    <div
+                      key={point}
+                      className={`flex items-start gap-3.5 bg-white border border-border p-5 transition-colors ${a.tint}`}
                     >
-                      BUILD IDEA · DIRECTION ONLY
-                    </span>
-                    <p className="font-mono text-sm md:text-[15px] text-foreground/80 leading-relaxed">
-                      {s.example}
-                    </p>
-                  </div>
+                      <span
+                        className={`mt-2 h-1.5 w-1.5 shrink-0 ${a.dot}`}
+                        aria-hidden
+                      />
+                      <span className="font-mono text-sm text-foreground/70 leading-relaxed">
+                        {point}
+                      </span>
+                    </div>
+                  ))}
                 </div>
               </article>
             ))}
           </div>
 
-          <div className="mt-12 border-l-2 border-gold bg-gold/5 px-6 py-5 w-full">
-            <span className="font-mono text-[10px] font-bold tracking-widest uppercase text-gold block mb-2">
-              NOTE
-            </span>
-            <p className="font-mono text-sm text-foreground/70 leading-relaxed">
-              Participants are encouraged to build practical, ethical, and
-              deployable solutions suitable for Nepal&apos;s operational
-              realities.
-            </p>
+          {/* NOTE TO PARTICIPANTS */}
+          <div className="relative mt-14 border border-border bg-soft overflow-hidden">
+            <span
+              className="absolute top-0 left-0 h-1 w-full bg-gold"
+              aria-hidden
+            />
+            <div className="p-8 md:p-10">
+              <span className="font-mono text-[10px] font-bold tracking-widest uppercase text-gold block mb-4">
+                A NOTE TO PARTICIPANTS
+              </span>
+              <h3 className="font-sans font-black text-2xl md:text-3xl uppercase text-foreground tracking-tight leading-tight mb-6">
+                These are directions, not blueprints.
+              </h3>
+              <div className="flex flex-col gap-5 max-w-3xl">
+                <p className="font-mono text-sm text-foreground/70 leading-relaxed">
+                  The problem statements above are simple guides to point you in
+                  the right direction. They are not prescriptive specifications.
+                  Participants are fully encouraged to apply their own
+                  creativity, research, and analysis - as long as the solution
+                  stays within the scope of usability and feasibility for Nepal
+                  Police.
+                </p>
+                <p className="font-mono text-sm text-foreground/70 leading-relaxed">
+                  Before building, participants are strongly requested to
+                  research existing tools and resources already available in
+                  Nepal - to avoid duplicating something that already exists. If
+                  you cannot find relevant information, or have questions about
+                  technical constraints, legal boundaries, existing systems, or
+                  operational realities, contact the contact persons listed on
+                  this page. They will walk you through everything - from
+                  technical details to legal frameworks.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          {/* SOURCES */}
+          <div className="mt-4 border border-border bg-white p-8 md:p-10">
+            <div className="flex items-center gap-3 mb-6">
+              <span className="font-mono text-[10px] font-bold tracking-widest uppercase text-foreground/40">
+                SOURCES
+              </span>
+              <span className="h-px flex-1 bg-border" />
+              <span className="font-mono text-[10px] font-bold tracking-widest uppercase text-foreground/40">
+                {sources.length} REFERENCES
+              </span>
+            </div>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-3.5">
+              {sources.map((src) => (
+                <div key={src} className="flex items-start gap-3">
+                  <span
+                    className="mt-2 h-1 w-1 shrink-0 bg-gold"
+                    aria-hidden
+                  />
+                  <span className="font-mono text-xs text-foreground/55 leading-relaxed">
+                    {src}
+                  </span>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </section>
 
+      {/* CTA */}
       <section className="w-full bg-indigo py-16 md:py-20">
         <div className="mx-auto max-w-5xl px-6 md:px-10">
           <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-10">
@@ -187,8 +278,8 @@ export default async function TrackPage({
                 JOIN THE HACKATHON
               </h3>
               <p className="font-mono text-sm text-white/60 leading-relaxed">
-                Form a team of 3–4, pick a sub-theme, and ship something that
-                serves Nepal Police and the citizens of Lumbini Province.
+                Form a team of 3–4, pick a problem statement, and ship something
+                that serves Nepal Police and the citizens of Lumbini Province.
               </p>
             </div>
 

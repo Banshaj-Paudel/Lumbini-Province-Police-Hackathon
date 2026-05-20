@@ -19,7 +19,7 @@ export function AnimateIn({ children, delay = 0, className = "" }: Props) {
     if (!el) return;
 
     const rect = el.getBoundingClientRect();
-    // Already in view on load — show immediately, no jank
+    // Already in view on load - show immediately, no jank
     if (rect.top < window.innerHeight * 0.92) return;
 
     el.style.opacity = "0";
