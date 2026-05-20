@@ -9,7 +9,7 @@ export function EventDetails() {
     {
       Icon: Clock,
       title: "Duration",
-      description: "36-hour continuous hackathon sprint",
+      description: "36-Hour Innovation Sprint",
     },
     {
       Icon: Users,

@@ -38,16 +38,16 @@ export const tracks: Track[] = [
     accent: "crimson",
     stats: [
       {
-        value: "59,203",
-        label: "crime reports in FY 2023/24 up 48% from 3 years earlier",
+        value: "58,472",
+        label: "crime reports in FY 2081/082",
       },
       {
         value: "20/day",
         label:
-          "average suicide deaths 7,223 lives lost in a single year. 1,300+ suicide cases in Lumbini in FY 2081/082",
+          "average suicide deaths 7,221 lives lost in a single year. 1,300+ suicide cases in Lumbini in FY 2081/082",
       },
       {
-        value: "1 : 385",
+        value: "~ 1 : 393",
         label: "police-to-citizen ratio (UN standard is 1:220)",
       },
       {
@@ -56,13 +56,13 @@ export const tracks: Track[] = [
           "of people with mental health problems receive no treatment",
       },
       {
-        value: "156,821",
+        value: "150,000+",
         label:
-          "estimated drug users nationally; 69.5% aged 20-29. 711 drug cases in Lumbini in FY 2081/082 up 44% in 5 years",
+          "estimated drug users nationally; ~70% aged 20-29. 700+ drug cases in Lumbini in FY 2081/082",
       },
       {
-        value: "6,590",
-        label: "missing persons in FY 2023/24 - 4,761 were girls",
+        value: "23,621",
+        label: "missing persons in FY 2024/25 - 10,694 were women, 7,232 were children and 186 were senior citizens",
       },
     ],
     problems: [
@@ -70,14 +70,14 @@ export const tracks: Track[] = [
         number: "1",
         title: "The crisis moment",
         question:
-          "How can technology help someone in an emergency reach the right help, fast - even in remote or low-connectivity areas or marginalised communities - and keep them informed, supported, and connected to services after an incident is filed?",
+          "How can technology help someone in an emergency reach the right help, fast - even in remote or low-connectivity areas or marginalised communities and keep them informed, supported, and connected to services after an incident is filed?",
         points: [
           "Emergency helplines: 100, 103, 104",
           "Awareness and accessibility uneven across provinces",
           "Many cannot safely make a call during a crisis",
-          "1:385 police-to-citizen ratio - response infrastructure is thin",
-          "6,590 missing persons in FY 2023/24",
-          "4,761 were girls - out of 6,590 missing",
+          "~1:393 police-to-citizen ratio - response infrastructure is thin",
+          "23,621 missing persons in FY 2024/25",
+          "10,694 were women - out of 23,621 missing",
           "Records fragmented at district level - no cross-agency visibility",
           "DV survivors have no follow-up mechanism after filing",
           "Victims cannot track case progress or understand legal procedures",
@@ -119,25 +119,17 @@ export const tracks: Track[] = [
         label:
           "killed on Lumbini roads in FY 2081/082 - roughly 1.4 deaths every single day",
       },
+      
+     
       {
-        value: "4,502",
-        label:
-          "total road accidents in Lumbini in just 10 months of FY 2082/083",
-      },
-      {
-        value: "1,566",
-        label:
-          "seriously injured in Lumbini road accidents in FY 2082/083 (10 months)",
-      },
-      {
-        value: "1 : 542",
+        value: "~ 1 : 542",
         label:
           "police-to-citizen ratio in Lumbini - every officer already stretched thin",
       },
       {
         value: "75+",
         label:
-          "killed in Sep 2025 protests - 13,182 rounds fired in 2 days, crowd size underestimated",
+          "killed in Sep 2025 protests - 2,642 rounds fired in 2 days, crowd size underestimated",
       },
       {
         value: "250",
@@ -152,7 +144,6 @@ export const tracks: Track[] = [
         question:
           "How can technology help traffic police manage roads, intersections, and accident hotspots more safely - given severe understaffing and rapidly growing vehicle numbers?",
         points: [
-          "261 deaths in Lumbini in just 7 months",
           "7 deaths/day nationally from road accidents",
           "39% of crashes occur at night",
           "1 officer per 1,270 vehicles in Kathmandu",
@@ -168,10 +159,9 @@ export const tracks: Track[] = [
           "How can technology help Nepal Police plan, monitor, and manage public gatherings - reducing the risk of disproportionate response and civilian harm?",
         points: [
           "Sep 2025 protests: 75+ killed, 2,000+ injured",
-          "Police fired 13,182 rounds in 2 days",
+          "Police fired 2,642 rounds in 2 days",
           "Commanders underestimated crowd size - no real-time situational awareness",
-          "Nepal Police holds Matrice 600 drones - not yet deployed in live ops",
-          "No software or protocols for drone deployment in public order situations",
+          "Nepal Police holds numerous drones not yet deployed in live operations and disaster management",
         ],
       },
       {
@@ -183,7 +173,7 @@ export const tracks: Track[] = [
           "2024 floods: 250 killed",
           "30,000+ personnel across 21 districts - coordinated only by phone call",
           "No shared situational map - agencies operated in complete silos",
-          "2018–2024: 32,000+ disaster events, ~3,000 deaths, NPR 23.6B in losses",
+          "2018–2024: 32,000+ disaster events, ~3,000 deaths, Billions in losses",
           "Various disaster-prone areas of Lumbini have no reliable contact with concerned agencies",
         ],
       },
@@ -214,11 +204,6 @@ export const tracks: Track[] = [
         label: "financial fraud growth in one year - 4,112 to 7,723 cases",
       },
       {
-        value: "0.5%",
-        label:
-          "prosecution rate - just 1 in 200 complaints ever reaches court",
-      },
-      {
         value: "3,093%",
         label:
           "TikTok-linked crime growth in 4 years - Facebook drives 72.73% of all cases",
@@ -236,6 +221,7 @@ export const tracks: Track[] = [
           "TikTok-linked crime up 3,093% in 4 years",
           "70% of perpetrators aged 19–30 - many recruited as money mules",
           "Only 3 mutual legal assistance treaties internationally",
+          "Limited technical investigation experts in Nepal Police",
         ],
       },
       {

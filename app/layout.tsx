@@ -32,9 +32,9 @@ export const metadata: Metadata = {
     "Police Innovation Challenge",
     "Digital Public Safety Nepal",
   ].join(", "),
-  authors: [{ name: "Lumbini Province Police" }],
-  creator: "Lumbini Province Police",
-  publisher: "Lumbini Province Police",
+  authors: [{ name: "Lumbini Province Police Office" }],
+  creator: "Lumbini Province Police Office",
+  publisher: "Lumbini Province Police Office",
   robots:
     "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
   openGraph: {

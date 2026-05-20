@@ -33,7 +33,7 @@ export function SchemaMarkup() {
     },
     organizer: {
       "@type": "Organization",
-      name: "Lumbini Province Police",
+      name: "Lumbini Province Police Office",
       url: "https://lumbini.nepalpolice.gov.np",
       logo: "https://hackathon.nepalpolice.gov.np/logo.png",
       sameAs: ["https://www.facebook.com/lppodang"],
@@ -48,9 +48,9 @@ export function SchemaMarkup() {
   const organizationSchema = {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
-    name: "Lumbini Province Police",
+    name: "Lumbini Province Police Office",
     description:
-      "Lumbini Province Police - proudly leading the nation as the first governmental body to organize a hackathon, a defining moment for public sector innovation in Nepal. Advancing digital public safety and citizen-police innovation across Lumbini Province.",
+      "Lumbini Province Police Office - proudly leading the nation as the first governmental body to organize a hackathon, a defining moment for public sector innovation in Nepal. Advancing digital public safety and citizen-police innovation across Lumbini Province.",
     url: "https://lumbini.nepalpolice.gov.np",
     telephone: "+977-71-1234567",
     email: "ujjwalkhadka@nepalpolice.gov.np",
@@ -74,7 +74,7 @@ export function SchemaMarkup() {
         name: "Who can participate in Lumbini Province Police Hackathon?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "The hackathon is open to all Nepalese developers and tech enthusiasts. Teams of 3-4 members are required.",
+          text: "The hackathon is Open to innovators across Nepal and tech enthusiasts. Teams of 3-4 members are required.",
         },
       },
       {

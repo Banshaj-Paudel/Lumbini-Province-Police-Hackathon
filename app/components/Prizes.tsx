@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Trophy, Medal, Award } from "lucide-react";
+import { Trophy, Medal, Award, Gift } from "lucide-react";
 import { SectionHeading } from "./shared/SectionHeading";
 
 type Accent = "gold" | "crimson" | "indigo";
@@ -133,6 +133,22 @@ export function Prizes() {
             );
           })}
         </div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5, delay: 0.3 }}
+          className="mt-4 flex items-center gap-4 border-l-2 border-gold bg-gold/5 px-6 py-5"
+        >
+          <Gift className="text-gold shrink-0" size={26} aria-hidden />
+          <p className="font-mono text-sm text-foreground/70 leading-relaxed">
+            <span className="font-bold text-foreground">
+              And surprise events and gifts
+            </span>{" "}
+            throughout the hackathon.
+          </p>
+        </motion.div>
       </div>
     </section>
   );

@@ -27,7 +27,7 @@ export function Footer() {
               </div>
             </div>
             <p className="mt-6 font-mono text-xs text-white/40 leading-relaxed max-w-xs">
-              Presented by Lumbini Province Police as part of the initiative
+              Presented by Lumbini Province Police Office as part of the initiative
               for digital public safety innovation in Nepal.
             </p>
           </div>
@@ -79,7 +79,7 @@ export function Footer() {
                   href="tel:+977986225587"
                   className="font-mono text-xs text-white/60 hover:text-gold transition-colors"
                 >
-                  +977 9862255871
+                  +977 9702305664
                 </a>
               </li>
               <li className="flex items-center gap-3">
@@ -105,7 +105,7 @@ export function Footer() {
 
         <div className="border-t border-white/10 pt-8 flex flex-col md:flex-row md:items-center md:justify-between gap-4">
           <p className="font-mono text-xs text-white/30">
-            2026 Lumbini Province Police. All rights reserved.
+            2026 Lumbini Province Police Office. All rights reserved.
           </p>
           <p className="font-mono text-xs uppercase text-white/20">
             Innovation for Secure Digital Nepal

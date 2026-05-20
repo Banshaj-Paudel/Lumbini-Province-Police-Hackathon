@@ -95,6 +95,6 @@ export const contentTargets = {
     "Real-world impact on public safety",
     "Expert mentors and industry professionals",
     "NPR 1,00,000 prize pool",
-    "Government recognition certificates",
+    "Official Recognition Certificates",
   ],
 };

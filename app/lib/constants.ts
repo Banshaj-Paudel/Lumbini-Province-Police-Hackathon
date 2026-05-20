@@ -40,6 +40,6 @@ export const whyJoinData = [
   {
     Icon: Award,
     title: "PRIZE POOL",
-    desc: "NPR 1,00,000 PRIZE POOL across all tracks, plus official government recognition certificates.",
+    desc: "NPR 1,00,000 PRIZE POOL across all tracks, plus official Official Recognition Certificates.",
   },
 ];

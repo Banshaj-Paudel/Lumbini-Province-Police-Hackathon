@@ -23,7 +23,7 @@ export function Hero() {
           <div className="flex items-center gap-3">
             <span className="block h-px w-2.5-gold" />
             <span className="font-mono font-bold text-xs tracking-widest uppercase text-gold">
-              PRESENTED BY NEPAL POLICE
+              PRESENTED BY LUMBINI PROVINCE POLICE OFFICE
             </span>
           </div>
           <h1
@@ -91,7 +91,7 @@ export function Hero() {
                   NPR 1,00,000 Prize Pool
                 </dt>
                 <dd className="font-mono text-xs text-white/50 mt-1">
-                  Cash prizes + Government recognition certificates
+                  Cash prizes + Official Recognition Certificates
                 </dd>
               </div>
             </div>

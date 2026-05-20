@@ -12,7 +12,12 @@ export function FAQ() {
     {
       question: "Who can participate in the hackathon?",
       answer:
-        "The hackathon is open to all Nepalese developers, programmers, designers and tech enthusiasts. Teams of 3-4 members are required. No experience requirement beginners and experts alike can participate.",
+        "The hackathon is Open to innovators across Nepal, programmers, designers and tech enthusiasts. Teams of 3-4 members are required. No experience requirement beginners and experts alike can participate.",
+    },
+    {
+      question: "Can participants under 18 join the hackathon?",
+      answer:
+        "Yes. However, participants below 18 years of age must bring a signed consent letter from their parent or guardian. Without this consent letter, underage participants will not be permitted to take part in the event.",
     },
     {
       question: "What is the registration fee?",
@@ -37,7 +42,7 @@ export function FAQ() {
     {
       question: "What happens after the hackathon?",
       answer:
-        "Winning projects will receive cash prizes and government recognition certificates. Outstanding projects may have opportunities for further collaboration with Lumbini Province Police.",
+        "Winning projects will receive cash prizes and Official Recognition Certificates. Outstanding projects may have opportunities for further collaboration with Lumbini Province Police Office.",
     },
     {
       question: "What are the judging criteria?",

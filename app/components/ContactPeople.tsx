@@ -12,7 +12,7 @@ export function ContactPeople() {
     },
     {
       name: "Inspector Prashant Mainali",
-      phone: "+977 9862255871",
+      phone: "+977 9702305664",
     },
     {
       name: "Banshaj Paudel",

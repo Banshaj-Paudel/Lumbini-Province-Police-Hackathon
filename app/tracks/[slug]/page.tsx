@@ -227,7 +227,7 @@ export default async function TrackPage({
                 <p className="font-mono text-sm text-foreground/70 leading-relaxed">
                   Before building, participants are strongly requested to
                   research existing tools and resources already available in
-                  Nepal - to avoid duplicating something that already exists. If
+                  Nepal, to avoid duplicating something that already exists. If
                   you cannot find relevant information, or have questions about
                   technical constraints, legal boundaries, existing systems, or
                   operational realities, contact the contact persons listed on

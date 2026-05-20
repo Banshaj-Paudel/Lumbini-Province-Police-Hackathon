@@ -13,7 +13,7 @@ export function SiteFooter() {
             <BadgeMark size={36} light />
             <div>
               <p className="text-[14px] font-bold text-white tracking-tight">
-                Lumbini Province Police
+                Lumbini Province Police Office
               </p>
               <p className="mono text-[10px] text-slate-500 mt-0.5 tracking-widest uppercase">
                 Hackathon · 2026
@@ -69,7 +69,7 @@ export function SiteFooter() {
 
       <div className="border-t border-white/8">
         <div className="mx-auto max-w-7xl px-6 py-5 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 text-[12px]">
-          <span>© 2026 Lumbini Province Police. All rights reserved.</span>
+          <span>© 2026 Lumbini Province Police Office. All rights reserved.</span>
           <div className="flex gap-5">
             <Link href="#privacy" className="hover:text-white transition-colors">Privacy</Link>
             <Link href="#terms"   className="hover:text-white transition-colors">Terms</Link>
