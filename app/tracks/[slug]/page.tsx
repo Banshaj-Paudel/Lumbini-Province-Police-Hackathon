@@ -44,7 +44,6 @@ export default async function TrackPage({
     <div className="flex flex-col w-full min-h-screen">
       <Navigation />
 
-      {/* HERO */}
       <section className="relative w-full bg-white py-14 sm:py-16 md:py-24 border-b border-border overflow-hidden">
         <div className="relative mx-auto max-w-5xl px-5 sm:px-6 md:px-10">
           {/* eslint-disable-next-line @next/next/no-html-link-for-pages */}
@@ -94,7 +93,6 @@ export default async function TrackPage({
         </div>
       </section>
 
-      {/* THE SCALE OF THE PROBLEM */}
       <section className="w-full bg-soft py-14 sm:py-16 md:py-20 border-b border-border">
         <div className="mx-auto max-w-5xl px-5 sm:px-6 md:px-10">
           <div className="flex items-center gap-4 mb-8 sm:mb-10">
@@ -122,7 +120,6 @@ export default async function TrackPage({
         </div>
       </section>
 
-      {/* PROBLEM STATEMENTS */}
       <section className="w-full bg-white py-14 sm:py-16 md:py-24">
         <div className="mx-auto max-w-5xl px-5 sm:px-6 md:px-10">
           <div className="flex flex-col gap-3 mb-10 sm:mb-12 max-w-2xl">
@@ -193,7 +190,6 @@ export default async function TrackPage({
             ))}
           </div>
 
-          {/* NOTE TO PARTICIPANTS */}
           <div className="relative mt-14 border border-border bg-soft overflow-hidden">
             <span
               className="absolute top-0 left-0 h-1 w-full bg-gold"
@@ -218,7 +214,7 @@ export default async function TrackPage({
                 <p className="font-mono text-sm text-foreground/70 leading-relaxed">
                   Before building, participants are strongly requested to
                   research existing tools and resources already available in
-                  Nepal, to avoid duplicating something that already exists. If
+                  Nepal Police, to avoid duplicating something that already exists. If
                   you cannot find relevant information, or have questions about
                   technical constraints, legal boundaries, existing systems, or
                   operational realities, contact the contact persons listed on
@@ -228,12 +224,9 @@ export default async function TrackPage({
               </div>
             </div>
           </div>
-
-
         </div>
       </section>
 
-      {/* CTA */}
       <section className="w-full bg-indigo py-14 sm:py-16 md:py-20">
         <div className="mx-auto max-w-5xl px-5 sm:px-6 md:px-10">
           <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-10">
