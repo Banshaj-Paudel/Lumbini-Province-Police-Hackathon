@@ -1,8 +1,6 @@
 import { ShieldAlert, Siren, MonitorCheck } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
 
-export type Accent = "crimson" | "gold" | "indigo";
-
 export type Stat = {
   value: string;
   label: string;
@@ -22,7 +20,6 @@ export type Track = {
   title: string;
   tagline: string;
   long: string;
-  accent: Accent;
   stats: Stat[];
   problems: Problem[];
 };
@@ -35,7 +32,6 @@ export const tracks: Track[] = [
     title: "PUBLIC SAFETY, EMERGENCY & SUPPORT SYSTEMS",
     tagline: "Crisis response, victim follow-up, and early intervention.",
     long: "Crime reports are up 48% in three years and the police-to-citizen ratio sits far below the UN standard. This theme is about helping people reach the right help fast and identifying those at risk before a crisis hits.",
-    accent: "crimson",
     stats: [
       {
         value: "58,472",
@@ -108,7 +104,6 @@ export const tracks: Track[] = [
     tagline:
       "Traffic intelligence, situational awareness, and disaster coordination.",
     long: "Officers run 10–12 hour shifts with no real-time data while road deaths, protests, and disasters stretch a thin force even thinner. This theme is about giving police the situational awareness and coordination tools they currently lack.",
-    accent: "gold",
     stats: [
       {
         value: "7/day",
@@ -187,7 +182,6 @@ export const tracks: Track[] = [
     tagline:
       "Open-source intelligence, AI-weaponised crime, and digital recon tools.",
     long: "Cybercrime has risen 757% in five years while just 1 in 200 complaints reaches court. This theme is about giving investigators the intelligence tooling to map criminal networks and counter AI-weaponised crime.",
-    accent: "indigo",
     stats: [
       {
         value: "757%",
@@ -241,42 +235,6 @@ export const tracks: Track[] = [
     ],
   },
 ];
-
-export type AccentStyles = {
-  bar: string;
-  icon: string;
-  label: string;
-  dot: string;
-  ring: string;
-  tint: string;
-};
-
-export const accentMap: Record<Accent, AccentStyles> = {
-  crimson: {
-    bar: "bg-crimson",
-    icon: "text-crimson",
-    label: "text-crimson",
-    dot: "bg-crimson",
-    ring: "group-hover:border-crimson",
-    tint: "hover:bg-crimson/[0.04]",
-  },
-  gold: {
-    bar: "bg-gold",
-    icon: "text-gold",
-    label: "text-gold",
-    dot: "bg-gold",
-    ring: "group-hover:border-gold",
-    tint: "hover:bg-gold/[0.06]",
-  },
-  indigo: {
-    bar: "bg-indigo",
-    icon: "text-indigo",
-    label: "text-indigo",
-    dot: "bg-indigo",
-    ring: "group-hover:border-indigo",
-    tint: "hover:bg-indigo/[0.05]",
-  },
-};
 
 export function getTrackBySlug(slug: string): Track | undefined {
   return tracks.find((t) => t.slug === slug);

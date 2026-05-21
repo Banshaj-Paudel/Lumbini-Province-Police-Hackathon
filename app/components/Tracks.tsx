@@ -4,7 +4,7 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 import { ArrowUpRight } from "lucide-react";
 import { SectionHeading } from "./shared/SectionHeading";
-import { tracks, accentMap } from "../lib/tracks";
+import { tracks } from "../lib/tracks";
 
 export function Tracks() {
   return (
@@ -19,66 +19,61 @@ export function Tracks() {
         </p>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4 items-stretch">
-          {tracks.map((t, i) => {
-            const a = accentMap[t.accent];
-            return (
-              <motion.div
-                key={t.slug}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: i * 0.1 }}
+          {tracks.map((t, i) => (
+            <motion.div
+              key={t.slug}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: i * 0.1 }}
+            >
+              <Link
+                href={`/tracks/${t.slug}`}
+                className="group relative flex h-full flex-col border border-border bg-white transition-colors hover:border-foreground/30"
               >
-                <Link
-                  href={`/tracks/${t.slug}`}
-                  className={`group relative block h-full border border-border bg-white transition-colors ${a.ring}`}
-                >
-                  <span
-                    className={`absolute top-0 left-0 h-full w-1 ${a.bar}`}
-                    aria-hidden
-                  />
+                <span
+                  className="absolute top-0 left-0 h-full w-px bg-border transition-all duration-300 group-hover:w-1 group-hover:bg-crimson"
+                  aria-hidden
+                />
 
-                  <div className="p-8 pl-10 flex flex-col gap-5 h-full">
-                    <div className="flex items-center justify-between">
-                      <t.Icon className={a.icon} size={36} />
-                      <span
-                        className={`font-mono text-xs font-bold tracking-widest uppercase ${a.label}`}
-                      >
-                        TRACK {t.number}
-                      </span>
-                    </div>
-
-                    <h3 className="font-sans font-black text-xl md:text-2xl uppercase text-foreground tracking-tight leading-tight min-h-[4.5rem]">
-                      {t.title}
-                    </h3>
-
-                    <p className="font-mono text-sm text-foreground/70 leading-relaxed">
-                      {t.tagline}
-                    </p>
-
-                    <span
-                      className={`font-mono text-[10px] font-bold tracking-widest uppercase border border-border bg-soft px-3 py-1.5 w-fit ${a.label}`}
-                    >
-                      {t.problems.length}{" "}
-                      {t.problems.length === 1 ? "PROBLEM" : "PROBLEMS"}
+                <div className="p-8 flex flex-col gap-5 flex-1">
+                  <div className="flex items-center justify-between">
+                    <t.Icon
+                      className="text-foreground"
+                      size={32}
+                      strokeWidth={1.5}
+                    />
+                    <span className="font-mono text-xs font-bold tracking-widest uppercase text-foreground/40">
+                      TRACK {t.number}
                     </span>
-
-                    <div className="mt-auto pt-5 border-t border-border flex items-center justify-between">
-                      <span
-                        className={`font-mono text-xs font-bold tracking-widest uppercase ${a.label}`}
-                      >
-                        EXPLORE TRACK
-                      </span>
-                      <ArrowUpRight
-                        size={18}
-                        className={`${a.icon} transition-transform group-hover:translate-x-1 group-hover:-translate-y-1`}
-                      />
-                    </div>
                   </div>
-                </Link>
-              </motion.div>
-            );
-          })}
+
+                  <h3 className="font-sans font-black text-xl md:text-2xl uppercase text-foreground tracking-tight leading-tight min-h-[4.5rem]">
+                    {t.title}
+                  </h3>
+
+                  <p className="font-mono text-sm text-foreground/60 leading-relaxed">
+                    {t.tagline}
+                  </p>
+
+                  <span className="font-mono text-[10px] font-bold tracking-widest uppercase border border-border text-foreground/50 px-3 py-1.5 w-fit">
+                    {t.problems.length}{" "}
+                    {t.problems.length === 1 ? "PROBLEM" : "PROBLEMS"}
+                  </span>
+
+                  <div className="mt-auto pt-5 border-t border-border flex items-center justify-between">
+                    <span className="font-mono text-xs font-bold tracking-widest uppercase text-foreground/50 transition-colors group-hover:text-crimson">
+                      EXPLORE TRACK
+                    </span>
+                    <ArrowUpRight
+                      size={18}
+                      className="text-foreground/30 transition-all group-hover:text-crimson group-hover:translate-x-1 group-hover:-translate-y-1"
+                    />
+                  </div>
+                </div>
+              </Link>
+            </motion.div>
+          ))}
         </div>
 
         <motion.div

@@ -5,7 +5,7 @@ import { ArrowLeft, ArrowRight, HelpCircle } from "lucide-react";
 import { Navigation } from "../../components/Navigation";
 import { Footer } from "../../components/Footer";
 import { DhakaZigzag } from "../../components/shared/DhakaZigzag";
-import { tracks, accentMap, getTrackBySlug, sources } from "../../lib/tracks";
+import { tracks, getTrackBySlug, sources } from "../../lib/tracks";
 
 export function generateStaticParams() {
   return tracks.map((t) => ({ slug: t.slug }));
@@ -34,7 +34,6 @@ export default async function TrackPage({
   const track = getTrackBySlug(slug);
   if (!track) notFound();
 
-  const a = accentMap[track.accent];
   const currentIdx = tracks.findIndex((t) => t.slug === track.slug);
   const next = tracks[(currentIdx + 1) % tracks.length];
   const problemCount = `${track.problems.length} ${
@@ -46,36 +45,36 @@ export default async function TrackPage({
       <Navigation />
 
       {/* HERO */}
-      <section className="relative w-full bg-white py-16 md:py-24 border-b border-border overflow-hidden">
-        <div className="relative mx-auto max-w-5xl px-6 md:px-10">
+      <section className="relative w-full bg-white py-14 sm:py-16 md:py-24 border-b border-border overflow-hidden">
+        <div className="relative mx-auto max-w-5xl px-5 sm:px-6 md:px-10">
           {/* eslint-disable-next-line @next/next/no-html-link-for-pages */}
           <a
             href="/#tracks"
-            className="inline-flex items-center gap-2 font-mono text-xs font-bold tracking-widest uppercase text-foreground/60 hover:text-crimson transition-colors mb-10"
+            className="inline-flex items-center gap-2 font-mono text-xs font-bold tracking-widest uppercase text-foreground/60 hover:text-crimson transition-colors mb-8 sm:mb-10"
           >
             <ArrowLeft size={14} />
             ALL TRACKS
           </a>
 
-          <div className="flex items-stretch gap-5">
-            <span className={`w-1 ${a.bar}`} aria-hidden />
-            <div className="flex flex-col gap-5 min-w-0">
-              <div className="flex items-center gap-3">
-                <track.Icon className={a.icon} size={32} />
-                <span
-                  className={`font-mono text-xs font-bold tracking-widest uppercase ${a.label}`}
-                >
+          <div className="flex items-stretch gap-4 sm:gap-5">
+            <span className="w-1 shrink-0 bg-crimson" aria-hidden />
+            <div className="flex flex-col gap-4 sm:gap-5 min-w-0">
+              <div className="flex flex-wrap items-center gap-x-3 gap-y-2">
+                <track.Icon
+                  className="text-foreground"
+                  size={30}
+                  strokeWidth={1.5}
+                />
+                <span className="font-mono text-xs font-bold tracking-widest uppercase text-foreground/50">
                   TRACK {track.number}
                 </span>
                 <span className="h-3 w-px bg-border" aria-hidden />
-                <span
-                  className={`font-mono text-xs font-bold tracking-widest uppercase ${a.label}`}
-                >
+                <span className="font-mono text-xs font-bold tracking-widest uppercase text-foreground/50">
                   {problemCount}
                 </span>
               </div>
 
-              <h1 className="font-sans font-black text-4xl md:text-6xl uppercase text-foreground tracking-tighter leading-[0.95]">
+              <h1 className="font-sans font-black text-3xl sm:text-4xl md:text-6xl uppercase text-foreground tracking-tighter leading-[0.95] break-words">
                 {track.title}
               </h1>
 
@@ -87,7 +86,7 @@ export default async function TrackPage({
                 <DhakaZigzag />
               </div>
 
-              <p className="font-mono text-base md:text-lg text-foreground/60 leading-relaxed max-w-3xl">
+              <p className="font-mono text-sm sm:text-base md:text-lg text-foreground/60 leading-relaxed max-w-3xl">
                 {track.long}
               </p>
             </div>
@@ -96,26 +95,22 @@ export default async function TrackPage({
       </section>
 
       {/* THE SCALE OF THE PROBLEM */}
-      <section className="w-full bg-soft py-16 md:py-20 border-b border-border">
-        <div className="mx-auto max-w-5xl px-6 md:px-10">
-          <div className="flex items-center gap-4 mb-10">
-            <span
-              className={`font-mono text-xs font-bold tracking-widest uppercase ${a.label}`}
-            >
+      <section className="w-full bg-soft py-14 sm:py-16 md:py-20 border-b border-border">
+        <div className="mx-auto max-w-5xl px-5 sm:px-6 md:px-10">
+          <div className="flex items-center gap-4 mb-8 sm:mb-10">
+            <span className="font-mono text-xs font-bold tracking-widest uppercase text-crimson">
               THE SCALE OF THE PROBLEM
             </span>
             <span className="h-px flex-1 bg-border" />
           </div>
 
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 sm:gap-4">
             {track.stats.map((s) => (
               <div
                 key={s.value}
-                className="bg-white border border-border p-6 flex flex-col gap-3"
+                className="bg-white border border-border p-5 md:p-6 flex flex-col gap-3"
               >
-                <span
-                  className={`font-sans font-black text-3xl md:text-4xl tracking-tighter leading-none ${a.label}`}
-                >
+                <span className="font-sans font-black text-2xl sm:text-3xl md:text-4xl tracking-tighter leading-none text-foreground">
                   {s.value}
                 </span>
                 <span className="font-mono text-xs text-foreground/60 leading-relaxed">
@@ -128,15 +123,13 @@ export default async function TrackPage({
       </section>
 
       {/* PROBLEM STATEMENTS */}
-      <section className="w-full bg-white py-16 md:py-24">
-        <div className="mx-auto max-w-5xl px-6 md:px-10">
-          <div className="flex flex-col gap-3 mb-12 max-w-2xl">
-            <span
-              className={`font-mono text-xs font-bold tracking-widest uppercase ${a.label}`}
-            >
+      <section className="w-full bg-white py-14 sm:py-16 md:py-24">
+        <div className="mx-auto max-w-5xl px-5 sm:px-6 md:px-10">
+          <div className="flex flex-col gap-3 mb-10 sm:mb-12 max-w-2xl">
+            <span className="font-mono text-xs font-bold tracking-widest uppercase text-crimson">
               WHAT YOU CAN BUILD
             </span>
-            <h2 className="font-sans font-black text-3xl md:text-4xl uppercase text-foreground tracking-tighter leading-tight">
+            <h2 className="font-sans font-black text-2xl sm:text-3xl md:text-4xl uppercase text-foreground tracking-tighter leading-tight">
               PROBLEM STATEMENTS
             </h2>
             <p className="font-mono text-sm text-foreground/60 leading-relaxed mt-1">
@@ -149,28 +142,26 @@ export default async function TrackPage({
             {track.problems.map((p) => (
               <article
                 key={p.number}
-                className="relative bg-soft border border-border p-8 md:p-10 overflow-hidden"
+                className="relative bg-soft border border-border p-6 sm:p-8 md:p-10 overflow-hidden"
               >
                 <span
-                  className={`absolute top-0 left-0 h-1 w-full ${a.bar}`}
+                  className="absolute top-0 left-0 h-1 w-full bg-crimson"
                   aria-hidden
                 />
 
-                <div className="flex items-baseline gap-4 mb-6">
-                  <span
-                    className={`font-sans font-black text-3xl md:text-4xl tracking-tighter leading-none ${a.label}`}
-                  >
+                <div className="flex items-baseline gap-3 sm:gap-4 mb-6">
+                  <span className="font-sans font-black text-2xl sm:text-3xl md:text-4xl tracking-tighter leading-none text-foreground/25 shrink-0">
                     {p.number.padStart(2, "0")}
                   </span>
-                  <h3 className="font-sans font-black text-2xl md:text-3xl uppercase text-foreground tracking-tight leading-tight">
+                  <h3 className="font-sans font-black text-xl sm:text-2xl md:text-3xl uppercase text-foreground tracking-tight leading-tight">
                     {p.title}
                   </h3>
                 </div>
 
-                <div className="bg-white border border-border p-5 md:p-6 mb-8 flex items-start gap-4">
+                <div className="bg-white border border-border p-5 md:p-6 mb-8 flex items-start gap-3.5 sm:gap-4">
                   <HelpCircle
                     size={22}
-                    className={`${a.icon} mt-0.5 shrink-0`}
+                    className="text-foreground/40 mt-0.5 shrink-0"
                     aria-hidden
                   />
                   <p className="font-mono text-sm md:text-[15px] text-foreground/80 leading-relaxed">
@@ -182,14 +173,14 @@ export default async function TrackPage({
                   THE NUMBERS BEHIND IT
                 </span>
 
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
                   {p.points.map((point) => (
                     <div
                       key={point}
-                      className={`flex items-start gap-3.5 bg-white border border-border p-5 transition-colors ${a.tint}`}
+                      className="flex items-start gap-3.5 bg-white border border-border p-4 sm:p-5 transition-colors hover:border-foreground/30"
                     >
                       <span
-                        className={`mt-2 h-1.5 w-1.5 shrink-0 ${a.dot}`}
+                        className="mt-2 h-1.5 w-1.5 shrink-0 bg-foreground/25"
                         aria-hidden
                       />
                       <span className="font-mono text-sm text-foreground/70 leading-relaxed">
@@ -208,11 +199,11 @@ export default async function TrackPage({
               className="absolute top-0 left-0 h-1 w-full bg-gold"
               aria-hidden
             />
-            <div className="p-8 md:p-10">
+            <div className="p-6 sm:p-8 md:p-10">
               <span className="font-mono text-[10px] font-bold tracking-widest uppercase text-gold block mb-4">
                 A NOTE TO PARTICIPANTS
               </span>
-              <h3 className="font-sans font-black text-2xl md:text-3xl uppercase text-foreground tracking-tight leading-tight mb-6">
+              <h3 className="font-sans font-black text-xl sm:text-2xl md:text-3xl uppercase text-foreground tracking-tight leading-tight mb-6">
                 These are directions, not blueprints.
               </h3>
               <div className="flex flex-col gap-5 max-w-3xl">
@@ -239,7 +230,7 @@ export default async function TrackPage({
           </div>
 
           {/* SOURCES */}
-          <div className="mt-4 border border-border bg-white p-8 md:p-10">
+          <div className="mt-4 border border-border bg-white p-6 sm:p-8 md:p-10">
             <div className="flex items-center gap-3 mb-6">
               <span className="font-mono text-[10px] font-bold tracking-widest uppercase text-foreground/40">
                 SOURCES
@@ -253,7 +244,7 @@ export default async function TrackPage({
               {sources.map((src) => (
                 <div key={src} className="flex items-start gap-3">
                   <span
-                    className="mt-2 h-1 w-1 shrink-0 bg-gold"
+                    className="mt-2 h-1 w-1 shrink-0 bg-foreground/25"
                     aria-hidden
                   />
                   <span className="font-mono text-xs text-foreground/55 leading-relaxed">
@@ -267,14 +258,14 @@ export default async function TrackPage({
       </section>
 
       {/* CTA */}
-      <section className="w-full bg-indigo py-16 md:py-20">
-        <div className="mx-auto max-w-5xl px-6 md:px-10">
+      <section className="w-full bg-indigo py-14 sm:py-16 md:py-20">
+        <div className="mx-auto max-w-5xl px-5 sm:px-6 md:px-10">
           <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-10">
             <div className="flex flex-col gap-3 max-w-xl">
               <span className="font-mono text-xs font-bold tracking-widest uppercase text-gold">
                 READY TO BUILD?
               </span>
-              <h3 className="font-sans font-black text-3xl md:text-4xl uppercase text-white tracking-tighter leading-tight">
+              <h3 className="font-sans font-black text-2xl sm:text-3xl md:text-4xl uppercase text-white tracking-tighter leading-tight">
                 JOIN THE HACKATHON
               </h3>
               <p className="font-mono text-sm text-white/60 leading-relaxed">
