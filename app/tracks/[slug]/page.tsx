@@ -5,7 +5,7 @@ import { ArrowLeft, ArrowRight, HelpCircle } from "lucide-react";
 import { Navigation } from "../../components/Navigation";
 import { Footer } from "../../components/Footer";
 import { DhakaZigzag } from "../../components/shared/DhakaZigzag";
-import { tracks, getTrackBySlug, sources } from "../../lib/tracks";
+import { tracks, getTrackBySlug } from "../../lib/tracks";
 
 export function generateStaticParams() {
   return tracks.map((t) => ({ slug: t.slug }));
@@ -229,31 +229,7 @@ export default async function TrackPage({
             </div>
           </div>
 
-          {/* SOURCES */}
-          <div className="mt-4 border border-border bg-white p-6 sm:p-8 md:p-10">
-            <div className="flex items-center gap-3 mb-6">
-              <span className="font-mono text-[10px] font-bold tracking-widest uppercase text-foreground/40">
-                SOURCES
-              </span>
-              <span className="h-px flex-1 bg-border" />
-              <span className="font-mono text-[10px] font-bold tracking-widest uppercase text-foreground/40">
-                {sources.length} REFERENCES
-              </span>
-            </div>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-3.5">
-              {sources.map((src) => (
-                <div key={src} className="flex items-start gap-3">
-                  <span
-                    className="mt-2 h-1 w-1 shrink-0 bg-foreground/25"
-                    aria-hidden
-                  />
-                  <span className="font-mono text-xs text-foreground/55 leading-relaxed">
-                    {src}
-                  </span>
-                </div>
-              ))}
-            </div>
-          </div>
+
         </div>
       </section>
 
