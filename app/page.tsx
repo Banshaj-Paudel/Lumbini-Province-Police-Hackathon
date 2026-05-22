@@ -13,6 +13,7 @@ import { Timeline } from "./components/Timeline";
 import { Judges } from "./components/Judges";
 import { Mentors } from "./components/Mentors";
 import { FAQ } from "./components/FAQ";
+import { SelectionProcess } from "./components/SelectionProcess";
 import { Register } from "./components/Register";
 import { ContactPeople } from "./components/ContactPeople";
 import { Footer } from "./components/Footer";
@@ -32,6 +33,8 @@ export default function Home() {
       <Prizes />
 
       <HimalayanDivider />
+            <SelectionProcess />
+
       <WhyJoin />
       <Timeline />
       <Judges />

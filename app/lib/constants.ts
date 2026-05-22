@@ -24,6 +24,7 @@ export const navLinks = [
   "TIMELINE",
   "JUDGES",
   "MENTORS",
+  "PROCESS",
 ];
 
 export const REGISTRATION_URL =
