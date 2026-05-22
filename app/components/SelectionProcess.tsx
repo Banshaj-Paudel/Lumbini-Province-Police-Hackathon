@@ -1,6 +1,6 @@
 "use client";
 
-import { useRef, useState, useCallback, useEffect } from "react";
+import { useRef, useState, useCallback, useEffect, type PointerEvent } from "react";
 import { motion } from "framer-motion";
 import {
   ClipboardList,
@@ -68,6 +68,17 @@ export function SelectionProcess() {
   const [active, setActive] = useState(0);
   const [atStart, setAtStart] = useState(true);
   const [atEnd, setAtEnd] = useState(false);
+  const [isDragging, setIsDragging] = useState(false);
+  const dragPointerId = useRef<number | null>(null);
+  const dragStartX = useRef(0);
+  const dragStartY = useRef(0);
+  const dragStartScroll = useRef(0);
+  const draggingRef = useRef(false);
+  const dragAxisLock = useRef<"x" | "y" | null>(null);
+  const dragLastX = useRef(0);
+  const dragLastTime = useRef(0);
+  const dragVelocity = useRef(0);
+  const inertiaRaf = useRef<number | null>(null);
 
   const update = useCallback(() => {
     const el = trackRef.current;
@@ -91,12 +102,115 @@ export function SelectionProcess() {
     return () => window.removeEventListener("resize", update);
   }, [update]);
 
+  useEffect(() => {
+    return () => {
+      if (inertiaRaf.current) {
+        cancelAnimationFrame(inertiaRaf.current);
+      }
+    };
+  }, []);
+
   const scrollByDir = (dir: 1 | -1) => {
     const el = trackRef.current;
     if (!el) return;
     const card = el.querySelector<HTMLElement>("[data-card]");
     const stride = card ? card.offsetWidth + GAP : el.clientWidth * 0.8;
     el.scrollBy({ left: dir * stride, behavior: "smooth" });
+  };
+
+  const startDrag = (event: PointerEvent<HTMLDivElement>) => {
+    const isTouch = event.pointerType === "touch";
+    if (event.pointerType === "mouse" && event.button !== 0) return;
+    const el = trackRef.current;
+    if (!el) return;
+    if (!isTouch) {
+      event.preventDefault();
+    }
+    if (inertiaRaf.current) {
+      cancelAnimationFrame(inertiaRaf.current);
+      inertiaRaf.current = null;
+    }
+    draggingRef.current = true;
+    dragPointerId.current = event.pointerId;
+    dragStartX.current = event.clientX;
+    dragStartY.current = event.clientY;
+    dragStartScroll.current = el.scrollLeft;
+    dragAxisLock.current = null;
+    dragLastX.current = event.clientX;
+    dragLastTime.current = performance.now();
+    dragVelocity.current = 0;
+    setIsDragging(true);
+    el.setPointerCapture(event.pointerId);
+  };
+
+  const onDragMove = (event: PointerEvent<HTMLDivElement>) => {
+    const el = trackRef.current;
+    if (!el || !draggingRef.current) return;
+    if (dragPointerId.current !== event.pointerId) return;
+    const deltaX = event.clientX - dragStartX.current;
+    const deltaY = event.clientY - dragStartY.current;
+    if (event.pointerType === "touch") {
+      if (!dragAxisLock.current) {
+        if (Math.abs(deltaX) < 6 && Math.abs(deltaY) < 6) return;
+        dragAxisLock.current =
+          Math.abs(deltaX) >= Math.abs(deltaY) ? "x" : "y";
+        if (dragAxisLock.current === "y") {
+          draggingRef.current = false;
+          dragPointerId.current = null;
+          setIsDragging(false);
+          if (el.hasPointerCapture(event.pointerId)) {
+            el.releasePointerCapture(event.pointerId);
+          }
+          return;
+        }
+      }
+      if (dragAxisLock.current !== "x") return;
+    }
+    event.preventDefault();
+    const delta = deltaX;
+    el.scrollLeft = dragStartScroll.current - delta;
+    const now = performance.now();
+    const dt = now - dragLastTime.current;
+    if (dt > 0) {
+      dragVelocity.current = (event.clientX - dragLastX.current) / dt;
+      dragLastX.current = event.clientX;
+      dragLastTime.current = now;
+    }
+  };
+
+  const endDrag = (event: PointerEvent<HTMLDivElement>) => {
+    const el = trackRef.current;
+    if (!el || !draggingRef.current) return;
+    if (dragPointerId.current === event.pointerId) {
+      if (el.hasPointerCapture(event.pointerId)) {
+        el.releasePointerCapture(event.pointerId);
+      }
+    }
+    draggingRef.current = false;
+    dragPointerId.current = null;
+    setIsDragging(false);
+    const startVelocity = -dragVelocity.current;
+    if (Math.abs(startVelocity) < 0.02) return;
+    let velocity = startVelocity;
+    let lastTime = performance.now();
+    const step = (time: number) => {
+      const dt = time - lastTime;
+      lastTime = time;
+      const max = el.scrollWidth - el.clientWidth;
+      const next = el.scrollLeft + velocity * dt;
+      el.scrollLeft = Math.max(0, Math.min(max, next));
+      if ((el.scrollLeft <= 0 && velocity < 0) || (el.scrollLeft >= max && velocity > 0)) {
+        velocity = 0;
+      }
+      const decay = Math.exp(-0.0035 * dt);
+      velocity *= decay;
+      if (Math.abs(velocity) < 0.02) {
+        inertiaRaf.current = null;
+        return;
+      }
+      inertiaRaf.current = requestAnimationFrame(step);
+    };
+    inertiaRaf.current = requestAnimationFrame(step);
   };
 
   return (
@@ -144,6 +258,11 @@ export function SelectionProcess() {
         <motion.div
           ref={trackRef}
           onScroll={update}
+          onPointerDown={startDrag}
+          onPointerMove={onDragMove}
+          onPointerUp={endDrag}
+          onPointerCancel={endDrag}
+          onPointerLeave={endDrag}
           initial="hidden"
           whileInView="show"
           viewport={{ once: true, amount: 0.15 }}
@@ -151,7 +270,9 @@ export function SelectionProcess() {
             hidden: {},
             show: { transition: { staggerChildren: 0.09 } },
           }}
-          className="no-scrollbar flex gap-5 overflow-x-auto snap-x snap-mandatory pb-1"
+          className={`no-scrollbar flex gap-5 overflow-x-auto snap-x snap-mandatory pb-1 touch-pan-y ${
+            isDragging ? "cursor-grabbing select-none" : "cursor-grab"
+          }`}
         >
           {steps.map((s) => (
             <motion.article
@@ -219,8 +340,9 @@ export function SelectionProcess() {
           />
         </div>
 
-        <p className="mt-4 font-mono text-[11px] text-foreground/40 sm:hidden">
-          Swipe to explore all steps →
+        <p className="mt-4 flex items-center justify-end text-foreground/40 sm:hidden">
+          <span className="text-xs font-mono pr-2">Swipe to explore all steps</span>
+          <ArrowRight size={14} strokeWidth={2} aria-hidden />
         </p>
       </div>
     </section>
