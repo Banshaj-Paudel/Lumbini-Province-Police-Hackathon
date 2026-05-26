@@ -14,6 +14,7 @@ import { Judges } from "./components/Judges";
 import { Mentors } from "./components/Mentors";
 import { FAQ } from "./components/FAQ";
 import { SelectionProcess } from "./components/SelectionProcess";
+import { EvaluationCriteria } from "./components/EvaluationCriteria";
 import { Register } from "./components/Register";
 import { ContactPeople } from "./components/ContactPeople";
 import { Footer } from "./components/Footer";
@@ -34,6 +35,7 @@ export default function Home() {
 
       <HimalayanDivider />
             <SelectionProcess />
+      <EvaluationCriteria />
 
       <WhyJoin />
       <Timeline />

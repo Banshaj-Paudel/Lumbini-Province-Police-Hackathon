@@ -8,7 +8,11 @@ import { ChevronDown } from "lucide-react";
 export function FAQ() {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
-  const faqs = [
+  const faqs: {
+    question: string;
+    answer: string;
+    bullets?: string[];
+  }[] = [
     {
       question: "Who can participate in the hackathon?",
       answer:
@@ -18,6 +22,12 @@ export function FAQ() {
       question: "Can participants under 18 join the hackathon?",
       answer:
         "Yes. However, participants below 18 years of age must bring a signed consent letter from their parent or guardian. Without this consent letter, underage participants will not be permitted to take part in the event.",
+    },
+    {
+      question:
+        "Do participants under 18 need to submit a parental consent letter during registration?",
+      answer:
+        "No. Participants below 18 years of age may submit the parental consent letter after team selection.",
     },
     {
       question: "What is the registration fee?",
@@ -30,6 +40,12 @@ export function FAQ() {
         "Yes. You must register with a pre-formed team of 3 to 4 members. Individual registrations are not accepted.",
     },
     {
+      question:
+        "Is the event environment safe and inclusive for female participants?",
+      answer:
+        "Yes. We are committed to providing a safe, supportive, and inclusive environment for all participants, including women participants traveling from different locations.",
+    },
+    {
       question: "What should I bring to the hackathon?",
       answer:
         "Bring your laptop, charger, and any required development tools. We'll provide food, refreshments, and a workspace. A sense of innovation and creativity are essential!",
@@ -40,9 +56,32 @@ export function FAQ() {
         "No specific prerequisites. The event welcomes developers, designers, and other creative professionals of all skill levels. Choose a track that interests you and build something great within the 36-hour timeframe.",
     },
     {
-      question: "What happens after the hackathon?",
+      question:
+        "Can we use AI tools, AI agents, or code-generation tools?",
       answer:
-        "Winning projects will receive cash prizes and Official Recognition Certificates. Outstanding projects may have opportunities for further collaboration with Lumbini Province Police Office.",
+        "Yes. AI tools, AI agents, and code-generation tools are permitted. However:",
+      bullets: [
+        "Major AI tools or agents used must be disclosed.",
+        "Teams must demonstrate understanding of their solution.",
+        "Solutions must involve meaningful participant contribution.",
+        "Organizers may ask teams to explain implementation decisions, architecture, or demonstrate components during evaluation.",
+      ],
+    },
+    {
+      question: "Can we build IoT or hardware projects?",
+      answer:
+        "Yes, IoT and hardware projects are welcome. However, teams are responsible for bringing their own components, sensors, microcontrollers, and any other required hardware materials. The venue will not provide IoT-specific equipment.",
+    },
+    {
+      question: "Can we work on multiple themes?",
+      answer:
+        "No. Teams are expected to build one solution that addresses public safety challenges and demonstrates practical usability for Nepal Police.",
+    },
+    {
+      question:
+        "Do we have to strictly follow the provided problem statements?",
+      answer:
+        "No. The problem statements are intended as directions, not strict specifications, and solutions can go beyond them. Participants are encouraged to apply their own creativity, research, and analysis, provided solutions remain practical, feasible, and relevant to Nepal Police operations and public safety. Teams are strongly encouraged to research existing Nepal Police systems, tools, and publicly available resources before building to avoid duplication. For questions about technical constraints, operational realities, existing systems, or legal considerations, please contact the persons listed on this website.",
     },
     {
       question: "What are the judging criteria?",
@@ -50,9 +89,9 @@ export function FAQ() {
         "Judging criteria will be announced closer to the event date."
     },
     {
-      question: "Can we build IoT or hardware projects?",
+      question: "What happens after the hackathon?",
       answer:
-        "Yes, IoT and hardware projects are welcome. However, teams are responsible for bringing their own components, sensors, microcontrollers, and any other required hardware materials. The venue will not provide IoT-specific equipment.",
+        "Winning projects will receive cash prizes and Official Recognition Certificates. Outstanding projects may have opportunities for further collaboration with Lumbini Province Police Office.",
     },
   ];
 
@@ -97,6 +136,22 @@ export function FAQ() {
                   <p className="font-mono text-sm leading-relaxed text-foreground/70">
                     {faq.answer}
                   </p>
+                  {faq.bullets && (
+                    <ul className="mt-3 flex flex-col gap-2">
+                      {faq.bullets.map((b) => (
+                        <li
+                          key={b}
+                          className="flex items-start gap-3 font-mono text-sm leading-relaxed text-foreground/70"
+                        >
+                          <span
+                            className="mt-2 h-1.5 w-1.5 shrink-0 bg-crimson"
+                            aria-hidden
+                          />
+                          <span>{b}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  )}
                 </motion.div>
               )}
             </motion.div>
