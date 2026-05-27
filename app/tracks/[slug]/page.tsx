@@ -127,7 +127,7 @@ export default async function TrackPage({
               WHAT YOU CAN BUILD
             </span>
             <h2 className="font-sans font-black text-2xl sm:text-3xl md:text-4xl uppercase text-foreground tracking-tighter leading-tight">
-              PROBLEM STATEMENTS
+              GUIDING PROBLEM STATEMENTS
             </h2>
             <p className="font-mono text-sm text-foreground/60 leading-relaxed mt-1">
               Each problem below is a direction, not a blueprint. Pick one,

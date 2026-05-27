@@ -7,7 +7,6 @@ import {
   Search,
   Users,
   Mail,
-  Rocket,
   ArrowLeft,
   ArrowRight,
   type LucideIcon,
@@ -50,13 +49,6 @@ const steps: Step[] = [
     title: "Notification",
     desc: "Selected teams receive an official invitation and further event details via email.",
     tag: "Official invitation by email",
-  },
-  {
-    n: "05",
-    Icon: Rocket,
-    title: "Hack4Safety Begins",
-    desc: "Selected teams join the 36-hour innovation sprint at Police Training Centre, Butwal.",
-    tag: "36-hour innovation sprint",
   },
 ];
 
@@ -223,7 +215,7 @@ export function SelectionProcess() {
 
         <div className="flex flex-col gap-7 sm:flex-row sm:items-end sm:justify-between -mt-4 mb-12">
           <p className="font-mono text-sm text-foreground/60 max-w-2xl leading-relaxed">
-            Five steps from registration to the 36-hour Hackathon, exactly how
+            Four steps from registration to team notification, exactly how
             teams are screened, selected, and invited to Hack4Safety.
           </p>
 
