@@ -96,14 +96,22 @@ export function Footer() {
               CONTACT
             </p>
             <ul className="flex flex-col gap-4">
-              <li className="flex items-center gap-3">
-                <Mail size={14} className="text-gold shrink-0" />
-                <a
-                  href="mailto:ujjwalkhadka@nepalpolice.gov.np"
-                  className="font-mono text-xs text-white/60 hover:text-gold transition-colors"
-                >
-                  ujjwalkhadka@nepalpolice.gov.np
-                </a>
+              <li className="flex items-start gap-3">
+                <Mail size={14} className="text-gold shrink-0 mt-0.5" />
+                <div className="flex flex-col gap-1">
+                  <a
+                    href="mailto:ujjwalkhadka@nepalpolice.gov.np"
+                    className="font-mono text-xs text-white/60 hover:text-gold transition-colors"
+                  >
+                    ujjwalkhadka@nepalpolice.gov.np
+                  </a>
+                  <a
+                    href="mailto:prashantmainali@nepalpolice.gov.np"
+                    className="font-mono text-xs text-white/60 hover:text-gold transition-colors"
+                  >
+                    prashantmainali@nepalpolice.gov.np
+                  </a>
+                </div>
               </li>
               <li className="flex items-center gap-3">
                 <Phone size={14} className="text-gold shrink-0" />

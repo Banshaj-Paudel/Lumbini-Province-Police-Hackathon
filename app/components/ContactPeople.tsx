@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Phone } from "lucide-react";
+import { Mail, Phone } from "lucide-react";
 import { SectionHeading } from "./shared/SectionHeading";
 
 export function ContactPeople() {
@@ -9,14 +9,17 @@ export function ContactPeople() {
     {
       name: "Inspector Ujjwal Khadka",
       phone: "+977 9851288989",
+      email: "ujjwalkhadka@nepalpolice.gov.np",
     },
     {
       name: "Inspector Prashant Mainali",
       phone: "+977 9702305664",
+      email: "prashantmainali@nepalpolice.gov.np",
     },
     {
       name: "Banshaj Paudel",
       phone: "+977 9865522222",
+      email: "banshajpaudel5010@gmail.com",
     },
   ];
 
@@ -26,7 +29,7 @@ export function ContactPeople() {
         <SectionHeading label="GET IN TOUCH" title="CONTACT PERSONS" />
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {contacts.map(({ name, phone }, i) => (
+          {contacts.map(({ name, phone, email }, i) => (
             <motion.div
               key={name}
               initial={{ opacity: 0, y: 20 }}
@@ -45,6 +48,15 @@ export function ContactPeople() {
                   className="font-mono text-sm text-crimson hover:text-crimson/80 transition-colors"
                 >
                   {phone}
+                </a>
+              </div>
+              <div className="mt-3 flex items-center gap-3">
+                <Mail size={20} className="text-crimson shrink-0" />
+                <a
+                  href={`mailto:${email}`}
+                  className="font-mono text-sm text-crimson hover:text-crimson/80 transition-colors break-all"
+                >
+                  {email}
                 </a>
               </div>
             </motion.div>
