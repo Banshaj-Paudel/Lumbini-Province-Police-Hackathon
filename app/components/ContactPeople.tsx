@@ -50,11 +50,11 @@ export function ContactPeople() {
                   {phone}
                 </a>
               </div>
-              <div className="mt-3 flex items-center gap-3">
+              <div className="mt-3 flex items-start gap-3">
                 <Mail size={20} className="text-crimson shrink-0" />
                 <a
                   href={`mailto:${email}`}
-                  className="font-mono text-sm text-crimson hover:text-crimson/80 transition-colors break-all"
+                  className="min-w-0 font-mono text-xs md:text-sm leading-tight text-crimson hover:text-crimson/80 transition-colors break-words"
                 >
                   {email}
                 </a>

@@ -101,13 +101,13 @@ export function Footer() {
                 <div className="flex flex-col gap-1">
                   <a
                     href="mailto:ujjwalkhadka@nepalpolice.gov.np"
-                    className="font-mono text-xs text-white/60 hover:text-gold transition-colors"
+                    className="font-mono text-[11px] md:text-xs whitespace-nowrap text-white/60 hover:text-gold transition-colors"
                   >
                     ujjwalkhadka@nepalpolice.gov.np
                   </a>
                   <a
                     href="mailto:prashantmainali@nepalpolice.gov.np"
-                    className="font-mono text-xs text-white/60 hover:text-gold transition-colors"
+                    className="font-mono text-[11px] md:text-xs whitespace-nowrap text-white/60 hover:text-gold transition-colors"
                   >
                     prashantmainali@nepalpolice.gov.np
                   </a>
