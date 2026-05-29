@@ -20,6 +20,7 @@ export const tickerItems = [
 
 export const navLinks = [
   "ABOUT",
+  "RESOURCES",
   "TRACKS",
   "TIMELINE",
   "JUDGES",
