@@ -1,4 +1,4 @@
-'use client';
+"use client";
 
 import Link from "next/link";
 import dynamic from "next/dynamic";
@@ -49,8 +49,9 @@ export default function NotFound() {
 
           {/* Subheading */}
           <p className="text-lg md:text-xl text-foreground/60 font-mono mb-12 max-w-2xl mx-auto leading-relaxed">
-            The page you&apos;re looking for is unavailable. It may have been moved, removed, or
-            the URL might be incorrect. Please check and try again or return to the homepage.
+            The page you&apos;re looking for is unavailable. It may have been
+            moved, removed, or the URL might be incorrect. Please check and try
+            again or return to the homepage.
           </p>
 
           {/* Action Buttons */}
@@ -60,16 +61,20 @@ export default function NotFound() {
               className="group inline-flex items-center justify-center gap-3 bg-crimson text-white font-mono font-bold text-sm uppercase tracking-widest px-8 py-4 hover:shadow-lg hover:shadow-crimson/50 transition-all duration-300 transform hover:scale-105"
             >
               <span>BACK TO HOME</span>
-              <ArrowRight size={20} className="group-hover:translate-x-1 transition-transform" />
+              <ArrowRight
+                size={20}
+                className="group-hover:translate-x-1 transition-transform"
+              />
             </Link>
             {/* eslint-disable-next-line @next/next/no-html-link-for-pages */}
-            <a
-              href="/#register"
-              className="group inline-flex items-center justify-center gap-3 border-2 border-crimson text-crimson font-mono font-bold text-sm uppercase tracking-widest px-8 py-4 hover:bg-crimson hover:text-white transition-colors"
+            <span
+              aria-disabled="true"
+              role="status"
+              className="group inline-flex items-center justify-center gap-3 border-2 border-crimson text-crimson/80 font-mono font-bold text-sm uppercase tracking-widest px-8 py-4"
             >
-              <span>REGISTER NOW</span>
-              <ArrowRight size={20} className="group-hover:translate-x-1 transition-transform" />
-            </a>
+              <span>Registration Closed</span>
+              <ArrowRight size={20} className="transition-transform" />
+            </span>
           </div>
         </div>
       </div>

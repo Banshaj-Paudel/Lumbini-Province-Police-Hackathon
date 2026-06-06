@@ -73,7 +73,7 @@ export default async function TrackPage({
                 </span>
               </div>
 
-              <h1 className="font-sans font-black text-3xl sm:text-4xl md:text-6xl uppercase text-foreground tracking-tighter leading-[0.95] break-words">
+              <h1 className="font-sans font-black text-3xl sm:text-4xl md:text-6xl uppercase text-foreground tracking-tighter leading-[0.95] wrap-break-word">
                 {track.title}
               </h1>
 
@@ -214,12 +214,13 @@ export default async function TrackPage({
                 <p className="font-mono text-sm text-foreground/70 leading-relaxed">
                   Before building, participants are strongly requested to
                   research existing tools and resources already available in
-                  Nepal Police, to avoid duplicating something that already exists. If
-                  you cannot find relevant information, or have questions about
-                  technical constraints, legal boundaries, existing systems, or
-                  operational realities, contact the contact persons listed on
-                  this page. They will walk you through everything - from
-                  technical details to legal frameworks.
+                  Nepal Police, to avoid duplicating something that already
+                  exists. If you cannot find relevant information, or have
+                  questions about technical constraints, legal boundaries,
+                  existing systems, or operational realities, contact the
+                  contact persons listed on this page. They will walk you
+                  through everything - from technical details to legal
+                  frameworks.
                 </p>
               </div>
             </div>
@@ -245,18 +246,19 @@ export default async function TrackPage({
 
             <div className="flex flex-col gap-3 w-full md:w-auto md:min-w-[20rem]">
               {/* eslint-disable-next-line @next/next/no-html-link-for-pages */}
-              <a
-                href="/#register"
-                className="inline-flex items-center justify-between gap-5 bg-crimson text-white px-6 py-5 hover:bg-white hover:text-crimson transition-colors group"
+              <span
+                aria-disabled="true"
+                role="status"
+                className="inline-flex items-center justify-between gap-5 bg-crimson/60 text-white/80 px-6 py-5 transition-colors group"
               >
                 <span className="font-mono font-bold text-sm uppercase tracking-widest">
-                  REGISTER NOW
+                  Registration Closed
                 </span>
                 <ArrowRight
                   size={20}
-                  className="shrink-0 transition-transform group-hover:translate-x-1"
+                  className="shrink-0 transition-transform"
                 />
-              </a>
+              </span>
 
               <Link
                 href={`/tracks/${next.slug}`}

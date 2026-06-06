@@ -56,7 +56,7 @@ export function Register() {
           viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 0.24 }}
           aria-disabled="true"
-          className="inline-flex items-center border-2 border-white bg-white/10 text-white/60 px-8 py-4 font-mono font-bold text-sm uppercase tracking-widest mt-2"
+          className="inline-flex items-center border-2 border-white bg-white/30 text-gray-200 px-8 py-4 font-mono font-bold text-sm uppercase tracking-widest mt-2"
           role="status"
         >
           Registration Closed
