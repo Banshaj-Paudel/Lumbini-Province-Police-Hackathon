@@ -56,8 +56,7 @@ export function FAQ() {
         "No specific prerequisites. The event welcomes developers, designers, and other creative professionals of all skill levels. Choose a track that interests you and build something great within the 36-hour timeframe.",
     },
     {
-      question:
-        "Can we use AI tools, AI agents, or code-generation tools?",
+      question: "Can we use AI tools, AI agents, or code-generation tools?",
       answer:
         "Yes. AI tools, AI agents, and code-generation tools are permitted. However:",
       bullets: [
@@ -85,8 +84,7 @@ export function FAQ() {
     },
     {
       question: "What are the judging criteria?",
-      answer:
-        "Judging criteria will be announced closer to the event date."
+      answer: "Judging criteria will be announced closer to the event date.",
     },
     {
       question: "What happens after the hackathon?",
@@ -96,7 +94,7 @@ export function FAQ() {
   ];
 
   return (
-    <section className="w-full bg-white py-24 md:py-28">
+    <section id="faq" className="w-full bg-white py-24 md:py-28">
       <div className="mx-auto max-w-4xl px-6 md:px-10">
         <SectionHeading label="COMMON QUESTIONS" title="FREQUENTLY ASKED" />
 

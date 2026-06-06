@@ -22,10 +22,8 @@ export const navLinks = [
   "ABOUT",
   "RESOURCES",
   "TRACKS",
-  "TIMELINE",
-  "JUDGES",
-  "MENTORS",
   "PROCESS",
+  "FAQ",
 ];
 
 export const REGISTRATION_URL =

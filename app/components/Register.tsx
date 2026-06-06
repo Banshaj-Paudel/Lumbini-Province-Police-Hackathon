@@ -38,7 +38,7 @@ export function Register() {
           transition={{ duration: 0.5, delay: 0.08 }}
           className="font-sans font-black text-5xl md:text-7xl tracking-tighter text-white"
         >
-          Register Now
+          Registration Closed
         </motion.h2>
         <motion.p
           initial={{ opacity: 0, y: 20 }}
@@ -47,20 +47,20 @@ export function Register() {
           transition={{ duration: 0.5, delay: 0.16 }}
           className="font-mono text-base text-white/80"
         >
-          Join us for a 36-hour innovation sprint on Jestha 30–31, 2083. Open to teams of 3 to 4 members.
+          Registration is now closed. Thank you for your interest—stay tuned for
+          future events and announcements.
         </motion.p>
-        <motion.a
+        <motion.span
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 0.24 }}
-          href="https://forms.cloud.microsoft/pages/responsepage.aspx?id=Gb27KmR-_ESpiPdjK6Yp_CIbeRW4vHVHjavU5S5yjM1UMTkyWkRHR1FaNjQxMDkwTzdOOENIOVpYWS4u&route=shorturl"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="inline-flex items-center border-2 border-white bg-white text-crimson px-8 py-4 font-mono font-bold text-sm uppercase tracking-widest transition-all duration-300 ease-out hover:bg-crimson hover:text-white hover:-translate-y-0.5 mt-2"
+          aria-disabled="true"
+          className="inline-flex items-center border-2 border-white bg-white/10 text-white/60 px-8 py-4 font-mono font-bold text-sm uppercase tracking-widest mt-2"
+          role="status"
         >
-          Register Now
-        </motion.a>
+          Registration Closed
+        </motion.span>
       </div>
     </section>
   );

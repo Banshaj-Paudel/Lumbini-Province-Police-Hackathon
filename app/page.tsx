@@ -10,9 +10,9 @@ import { Tracks } from "./components/Tracks";
 import { Provisions } from "./components/Provisions";
 import { Prizes } from "./components/Prizes";
 import { HimalayanDivider } from "./components/HimalayanDivider";
-import { Timeline } from "./components/Timeline";
-import { Judges } from "./components/Judges";
-import { Mentors } from "./components/Mentors";
+// import { Timeline } from "./components/Timeline";
+// import { Judges } from "./components/Judges";
+// import { Mentors } from "./components/Mentors";
 import { FAQ } from "./components/FAQ";
 import { SelectionProcess } from "./components/SelectionProcess";
 import { EvaluationCriteria } from "./components/EvaluationCriteria";
@@ -42,9 +42,9 @@ export default function Home() {
       <EvaluationCriteria />
 
       <WhyJoin />
-      <Timeline />
+      {/* <Timeline />
       <Judges />
-      <Mentors />
+      <Mentors /> */}
       <FAQ />
       <Register />
       <ContactPeople />
