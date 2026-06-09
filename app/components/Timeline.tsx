@@ -393,7 +393,7 @@ function GrandFinale() {
             <p className="font-mono text-sm md:text-base text-white/70 leading-relaxed mb-8">
               The top 3 winning teams will remain in Butwal following the
               hackathon and receive cash prizes along with official certificates
-              of achievement at the Butwal International Conference Center.
+              of achievement at the Butwal International Convention Center.
             </p>
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
               {[
