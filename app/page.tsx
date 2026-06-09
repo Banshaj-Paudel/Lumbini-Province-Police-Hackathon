@@ -10,7 +10,7 @@ import { Tracks } from "./components/Tracks";
 import { Provisions } from "./components/Provisions";
 import { Prizes } from "./components/Prizes";
 import { HimalayanDivider } from "./components/HimalayanDivider";
-// import { Timeline } from "./components/Timeline";
+import { Timeline } from "./components/Timeline";
 // import { Judges } from "./components/Judges";
 // import { Mentors } from "./components/Mentors";
 import { FAQ } from "./components/FAQ";

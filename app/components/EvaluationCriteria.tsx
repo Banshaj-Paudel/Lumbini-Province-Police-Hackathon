@@ -22,7 +22,7 @@ const criteria: Criterion[] = [
     n: "01",
     Icon: BookOpen,
     title: "Research & Understanding of Existing Nepal Police Systems",
-    desc: "Teams should demonstrate research on existing Nepal Police tools, public services, operational systems, apps, and publicly available resources to avoid duplication and show understanding of policing realities.",
+    desc: "Teams should demonstrate research on existing Nepal Police tools, public services, operational systems, apps, and publicly available resources to avoid duplication.",
   },
   {
     n: "02",

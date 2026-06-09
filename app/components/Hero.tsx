@@ -14,7 +14,7 @@ export function Hero() {
         className="absolute inset-0 dhaka-weave-dark pointer-events-none"
         aria-hidden="true"
       />
-      <div className="relative mx-auto max-w-7xl px-6 md:px-10 py-20 md:py-32 grid grid-cols-1 lg:grid-cols-[1fr_420px] gap-12 items-center">
+      <div className="relative mx-auto max-w-7xl px-6 md:px-10 py-12 md:py-24 grid grid-cols-1 lg:grid-cols-[1fr_420px] gap-12 items-center">
         <motion.article
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
