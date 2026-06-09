@@ -64,42 +64,36 @@ const categoryConfig: Record<ActivityCategory, ReturnType<typeof cat>> = {
 
 const day1Events: TimelineEvent[] = [
   {
-    time: "05:30 – 06:00",
-    title: "Organizing Committee Arrival",
-    note: "Internal setup and preparation",
-    category: "break",
-  },
-  {
-    time: "06:00 – 07:00",
+    time: "07:00 – 08:00",
     title: "Participant Registration + Consent Form & Code of Conduct Signing",
     note: "Breakfast served during registration",
     category: "registration",
   },
   {
-    time: "07:00 – 07:30",
+    time: "08:00 – 08:30",
     title: "Official Opening Ceremony & Welcome Program",
     note: "Chief Guest: DIG Bhupendra Bahadur Khatri",
     category: "ceremony",
     featured: true,
   },
   {
-    time: "07:30 – 08:00",
+    time: "08:30 – 08:40",
     title: "Symbolic Banner Signing - Official Coding Session Launch",
     note: "Marks the official start of the hackathon",
     category: "ceremony",
     featured: true,
   },
   {
-    time: "08:00 – 09:00",
+    time: "08:40 – 09:00",
     title: "Mentor Introduction, Problem Statement Briefing & Timeline",
     note: "Teams receive full briefing",
     category: "registration",
   },
   { time: "09:00 – 11:30", title: "Coding Session I", category: "coding" },
   { time: "11:30 – 12:30", title: "Lunch", category: "meal" },
-  { time: "12:30 – 15:00", title: "Coding Session II", category: "coding" },
-  { time: "15:00 – 17:00", title: "Dinner", category: "meal" },
-  { time: "17:00 – 20:00", title: "Refresher Event", category: "break" },
+  { time: "12:30 – 18:00", title: "Coding Session II", category: "coding" },
+  { time: "18:00 – 19:00", title: "Dinner", category: "meal" },
+  { time: "19:00 – 20:00", title: "Refresher Event", category: "break" },
   {
     time: "20:00 onwards",
     title: "Overnight Coding Session Continues",
@@ -108,15 +102,15 @@ const day1Events: TimelineEvent[] = [
 ];
 
 const day2Events: TimelineEvent[] = [
-  { time: "06:30 – 08:00", title: "Breakfast", category: "meal" },
+  { time: "07:30 – 08:00", title: "Breakfast", category: "meal" },
   {
-    time: "08:00 – 09:00",
+    time: "08:00 – 10:00",
     title: "Final Coding Session",
     note: "Last stretch before submission",
     category: "coding",
   },
   {
-    time: "09:00 – 11:00",
+    time: "10:00 – 11:00",
     title: "Presentation Preparation & Final Submission Checks",
     note: "Teams finalize decks and demos",
     category: "coding",
@@ -150,13 +144,13 @@ const day2Events: TimelineEvent[] = [
     featured: true,
   },
   {
-    time: "17:40 – 19:00",
+    time: "17:40 – 18:00",
     title: "Final Evaluation & Results Deliberation by Judging Panel",
     category: "judging",
     featured: true,
   },
   {
-    time: "19:00 – 19:30",
+    time: "18:00 – 18:30",
     title: "Closing Ceremony & Prize Distribution",
     note: "Winners announced - Chief Guest: DIG Bhupendra Bahadur Khatri",
     category: "ceremony",
