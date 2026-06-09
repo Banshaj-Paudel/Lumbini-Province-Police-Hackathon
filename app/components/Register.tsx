@@ -47,8 +47,8 @@ export function Register() {
           transition={{ duration: 0.5, delay: 0.16 }}
           className="font-mono text-base text-white/80"
         >
-          Registration is now closed. Thank you for your interest—stay tuned for
-          future events and announcements.
+          Registration is now closed. Thank you for your interest, stay tuned
+          for future events and announcements.
         </motion.p>
         <motion.span
           initial={{ opacity: 0, y: 20 }}

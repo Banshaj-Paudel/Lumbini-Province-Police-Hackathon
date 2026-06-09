@@ -132,3 +132,33 @@ body {
 .no-scrollbar::-webkit-scrollbar {
   display: none;
 }
+
+/* Timeline card hover lift */
+.timeline-card {
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+.timeline-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0, 65, 99, 0.12);
+}
+
+/* Timeline card directional pointers (CSS triangles) */
+.timeline-card::before {
+  content: "";
+  position: absolute;
+  top: 20px;
+  width: 0;
+  height: 0;
+  border-top: 8px solid transparent;
+  border-bottom: 8px solid transparent;
+}
+/* Card on left (pointing right toward spine) */
+.timeline-card-left::before {
+  right: -8px;
+  border-left: 8px solid #ffffff;
+}
+/* Card on right (pointing left toward spine) */
+.timeline-card-right::before {
+  left: -8px;
+  border-right: 8px solid #ffffff;
+}

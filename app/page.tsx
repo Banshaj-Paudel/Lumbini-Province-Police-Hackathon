@@ -42,8 +42,8 @@ export default function Home() {
       <EvaluationCriteria />
 
       <WhyJoin />
-      {/* <Timeline />
-      <Judges />
+      <Timeline />
+      {/* <Judges />
       <Mentors /> */}
       <FAQ />
       <Register />
